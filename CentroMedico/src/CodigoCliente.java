@@ -47,7 +47,7 @@ public class CodigoCliente {
 		System.out.println("Atenciones paciente 111:");
 //		System.out.println(centro.atencionesEnConsultorio(111));
 */
-		Paciente p = new Ambulatorio("Cuca",111,new Fecha(02,05,1990));
+		Paciente p = new ObraSocial("Cuca",111,new Fecha(02,05,1990), "Osde", 30);
 		System.out.println(p.toString());
 	}
 
