@@ -12,5 +12,9 @@ public class Internacion {
 		this.fecha = ingreso;
 		this.area = area;
 	}
+	@Override
+	public String toString() {
+		return "Area: "+area;
+	}
 	
 }

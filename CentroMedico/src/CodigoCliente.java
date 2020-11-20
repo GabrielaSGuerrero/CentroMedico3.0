@@ -49,6 +49,8 @@ public class CodigoCliente {
 */
 		Paciente p = new ObraSocial("Cuca",111,new Fecha(02,05,1990), "Osde", 30);
 		System.out.println(p.toString());
+		((ObraSocial) p).nuevaInternacion("Cardiologia", new Fecha(20,11,2020));
+		System.out.println(((ObraSocial) p).getInternaciones());
 	}
 
 }

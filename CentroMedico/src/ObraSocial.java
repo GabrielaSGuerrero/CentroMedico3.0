@@ -33,6 +33,9 @@ public class ObraSocial extends Paciente{
 		// TODO Auto-generated method stub
 		
 	}
+	public HashSet<tupla<Fecha, Internacion>> getInternaciones(){
+		return atencionesInternacion;
+	}
 
 	
 	
