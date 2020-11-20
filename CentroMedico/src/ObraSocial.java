@@ -10,13 +10,15 @@ public class ObraSocial extends Paciente{
 		super(n, hC, nac);
 		this.obraSocial = OS;
 		this.porcentaje = p;
+		this.atencionesInternacion = new HashSet<tupla<Fecha,Internacion>>();
 	}
 	@Override
 	public String toString() {
 		return super.toString()+"; O.S.: "+this.obraSocial+"; Porcentaje: "+this.porcentaje;
 	}
 	public void nuevaInternacion (String area, Fecha dia) {
-		
+		tupla<Fecha,Internacion> nueva = new tupla(dia, new Internacion(dia, area));
+		atencionesInternacion.add(nueva);
 	}
 	public void altaInternacion (Fecha alta) {
 		
