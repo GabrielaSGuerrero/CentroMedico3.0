@@ -3,7 +3,7 @@ public class CodigoCliente {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Centro centro=new Centro("Centro Medico Dolores Fuentes","30-36542563-0",3000);
+/*		Centro centro=new Centro("Centro Medico Dolores Fuentes","30-36542563-0",3000);
 		centro.agregarEspecialidad("Pediatria",2000);
 		centro.agregarEspecialidad("Cardiologia",3000);
 		centro.agregarEspecialidad("Traumatologia",2500);
@@ -46,7 +46,9 @@ public class CodigoCliente {
 		centro.agregarAtencion(111, new Fecha(18,11,2020),77777);
 		System.out.println("Atenciones paciente 111:");
 //		System.out.println(centro.atencionesEnConsultorio(111));
-
+*/
+		Paciente p = new Ambulatorio("Cuca",111,new Fecha(02,05,1990));
+		System.out.println(p.toString());
 	}
 
 }
