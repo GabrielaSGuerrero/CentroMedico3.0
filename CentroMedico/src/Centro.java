@@ -7,12 +7,24 @@ public class Centro {
 	HashMap<Integer, Medico> medicos;
 	//HashSet<Especialidad> especialidades; //sino un conjunto de tupla de String,double para nombre y valor
 	String CUIT;
+	String nombre;
 	double precioInternacion;
 
 	Centro (String CUIT, String nombre, double pInternacion){
 	
 	}
-	
+/*	public void toString() {
+		System.out.println("----------"+this.nombre+"---------");
+		System.out.println("CUIT: "+this.CUIT); System.out.println("");
+		System.out.println("Profesionales: ");
+		medicos.toString();
+		System.out.println("Especialidades que ofrece el Centro: ");
+		//especialidades.toString;
+		System.out.println("Pacientes del Centro:"); 
+		pacientes.toString();
+		System.out.println("Precio de internación por día: "+this.precioInternacion+"$");
+	}
+	*/
 	void agregarEspecialidad(String nombre, double valor) {
 		
 	}
