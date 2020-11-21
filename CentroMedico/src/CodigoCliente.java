@@ -49,7 +49,7 @@ public class CodigoCliente {
 */
 		Paciente p = new ObraSocial("Cuca",111,new Fecha(02,05,1990), "Osde", 30);
 		System.out.println(p.toString());
-		((ObraSocial) p).nuevaInternacion("Cardiologia", new Fecha(20,11,2020));
+		((ObraSocial) p).nuevaInternacion("Cardiologia", new Fecha(20,11,2020)); //porqué tengo que castear?? :( revisar teoria
 		System.out.println(((ObraSocial) p).getInternaciones());
 	}
 
