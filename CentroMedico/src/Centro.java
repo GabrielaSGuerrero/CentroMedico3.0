@@ -1,11 +1,12 @@
 import java.util.HashMap;
+import java.util.HashSet;
 //import java.util.Map;
 
 public class Centro {
  
 	HashMap<Integer, Paciente> pacientes; 
 	HashMap<Integer, Medico> medicos;
-	//HashSet<Especialidad> especialidades; //sino un conjunto de tupla de String,double para nombre y valor
+	HashSet<Especialidad> especialidades; //sino un conjunto de tupla de String,double para nombre y valor
 	String CUIT;
 	String nombre;
 	double precioInternacion;
@@ -22,7 +23,7 @@ public class Centro {
 		//especialidades.toString;
 		System.out.println("Pacientes del Centro:"); 
 		pacientes.toString();
-		System.out.println("Precio de internación por día: "+this.precioInternacion+"$");
+		System.out.println("Precio de internaciï¿½n por dï¿½a: "+this.precioInternacion+"$");
 	}
 	*/
 	void agregarEspecialidad(String nombre, double valor) {
@@ -40,13 +41,13 @@ public class Centro {
 	void agregarPacienteObraSocial(String nombre, int hC, Fecha nac, String	osocial, double p) {
 		
 	}
-	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de	atención en consultorio.
+	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de	atenciï¿½n en consultorio.
 		
 	}
-	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atención por	guardia.
+	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atenciï¿½n por	guardia.
 		
 	}
-	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internación.
+	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internaciï¿½n.
 		
 	}
 	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al pacienteinternado.

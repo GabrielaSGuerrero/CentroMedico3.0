@@ -14,5 +14,8 @@ public class Fecha {
 		return this.dia+"/"+this.mes+"/"+this.anio;
 	}
 	
-	public void hoy(){}
+	//public void hoy(){}
+	
+	//public boolean sonIguales() 
+		
 }

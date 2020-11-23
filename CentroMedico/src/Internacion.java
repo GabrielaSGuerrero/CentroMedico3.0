@@ -7,8 +7,9 @@ public class Internacion {
 	Fecha fechaAlta;
 	double costoTotal;
 	String area;
+	int numHabitacion;
 
-	Internacion(Fecha ingreso, String area){
+	Internacion(Fecha ingreso, String area, int numHabitacion){
 		this.fecha = ingreso;
 		this.area = area;
 	}

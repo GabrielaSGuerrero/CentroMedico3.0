@@ -18,8 +18,8 @@ public class ObraSocial extends Paciente{
 	}
 	public void nuevaInternacion (String area, Fecha dia) {
 		//implementar verificacion de que no se repita fecha
-		tupla<Fecha,Internacion> nueva = new tupla(dia, new Internacion(dia, area));
-		atencionesInternacion.add(nueva);
+		//tupla<Fecha,Internacion> nueva = new tupla(dia, new Internacion(dia, area));
+		//atencionesInternacion.add(nueva);
 	}
 	
 	public void altaInternacion (Fecha alta) {

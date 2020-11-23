@@ -12,7 +12,7 @@ public class Medico {
 		this.especialidad= especialidad;
 	}
 
-	
+	// GETTERS 
 	public double getHonorarios() {
 		return honorarios;
 	}
