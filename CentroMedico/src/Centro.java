@@ -1,4 +1,5 @@
 import java.awt.List;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 //import java.util.Map;
@@ -26,9 +27,14 @@ public class Centro {
 				+"\nPacientes del Centro:"+pacientes.toString()+"\nPrecio de internacion por dia: "+this.precioInternacion+"$";
 	}
 	
-	void agregarEspecialidad(String nombre, double valor) {
+	/*boolean agregarEspecialidad(String nombre, double valor) {
 		
+			return especialidades.add(new Especialidad(nombre,valor));
 	}
+		//chequear, la idea seria esta pero hay que darle forma, con el add ya nos aseguramos que no hay repetidos
+		*/ 
+	
+			
 	void agregarMedico(String nombre, Integer matricula, String nomEspecialidad,double valorTratamiento) {
 		medicos.put(matricula, new Medico(nombre, matricula,valorTratamiento,nomEspecialidad));
 	}//asegurada la no repeticion porque .put lo garantiza dado que matricula es key
@@ -44,7 +50,7 @@ public class Centro {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
 	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de	atenci�n en consultorio.
-		
+	
 	}
 	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atenci�n por	guardia.
 		

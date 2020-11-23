@@ -24,15 +24,21 @@ public abstract class Paciente {
 	}
 	public boolean estaInternado() {
 		// TODO Auto-generated method stub
+		
+		
 		return false;
 	}
-	public void altaInternacion(Fecha fechaAlta) {
+	public void  altaInternacion(Fecha fechaAlta) {
 		// TODO Auto-generated method stub
-		
-	}
+		//if(fechaAlta.esMayor(f)) {
+			
+		}
+	
+		}
+	
 /*	public HashSet<Internacion> getInternaciones() {
 		// TODO Auto-generated method stub
 		return null;
 	}*/
 
-}
+

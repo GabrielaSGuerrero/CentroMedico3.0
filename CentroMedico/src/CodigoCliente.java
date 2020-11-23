@@ -4,9 +4,9 @@ public class CodigoCliente {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Centro centro=new Centro("Centro Medico Dolores Fuentes","30-36542563-0",3000);
-//		centro.agregarEspecialidad("Pediatria",2000);
-//		centro.agregarEspecialidad("Cardiologia",3000);
-//		centro.agregarEspecialidad("Traumatologia",2500);
+	//	centro.agregarEspecialidad("Pediatria",2000);
+	//	centro.agregarEspecialidad("Cardiologia",3000);
+	//	centro.agregarEspecialidad("Traumatologia",2500);
 		centro.agregarMedico("Dr Perez", 55555, "Pediatria", 5000);
 		centro.agregarMedico("Dr Rodriguez", 66666, "Cardiologia", 8000);
 		centro.agregarMedico("Dr Curetta", 77777, "Traumatologia", 2000);

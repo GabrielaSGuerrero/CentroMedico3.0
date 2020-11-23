@@ -5,9 +5,9 @@ public class Especialidad {
 	double valor;
 	Especialidad especialidad;
 
-	Especialidad (String n, int mat, double val){ //Constructor
+	Especialidad (String n, double val){ //Constructor
 		this.nombre = n;
-		this.codigo= mat;
+		//this.codigo= mat;
 		this.valor= val;
 		
 		
