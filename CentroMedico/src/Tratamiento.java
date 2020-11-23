@@ -11,7 +11,7 @@ public class Tratamiento {
 	
 	}
 	@Override
-	public String toString() {
+	public String toString() { //NO DEBERIA IR SOLO EL NOMBRE Y LA MATRICULA?
 		return "Tratamiento [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
 	}

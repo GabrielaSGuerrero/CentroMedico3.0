@@ -4,13 +4,15 @@ public class ObraSocial extends Paciente{
 
 	String obraSocial;
 	double porcentaje;
-	HashSet<tupla<Fecha, Internacion>> atencionesInternacion;
+	//HashSet<tupla<Fecha, Internacion>> atencionesInternacion;
+	HashSet<Internacion> internaciones;
 	
 	ObraSocial(String n, int hC, Fecha nac, String OS, double p) {
 		super(n, hC, nac);
 		this.obraSocial = OS;
 		this.porcentaje = p;
-		this.atencionesInternacion = new HashSet<tupla<Fecha,Internacion>>();
+		//this.atencionesInternacion = new HashSet<tupla<Fecha,Internacion>>();
+		this.internaciones = new HashSet<Internacion>();
 	}
 	@Override
 	public String toString() {
@@ -35,8 +37,8 @@ public class ObraSocial extends Paciente{
 		// TODO Auto-generated method stub
 		
 	}
-	public HashSet<tupla<Fecha, Internacion>> getInternaciones(){
-		return atencionesInternacion;
+	public HashSet<Internacion> getInternaciones(){
+		return internaciones;
 	}
 
 	
