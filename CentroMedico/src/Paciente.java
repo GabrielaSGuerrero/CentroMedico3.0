@@ -1,10 +1,10 @@
 
 public abstract class Paciente {
 	String nombre;
-	int historiaClinica;
+	Integer historiaClinica;
 	Fecha nac;
 
-	Paciente (String n, int hC, Fecha nac){
+	Paciente (String n, Integer hC, Fecha nac){
 		this.nombre = n;
 		this.historiaClinica = hC;
 		this.nac = nac;
@@ -13,7 +13,7 @@ public abstract class Paciente {
 	public String toString() {
 		return "PACIENTE hC: "+this.historiaClinica+ "; "+this.nombre+"; F.Nac: "+this.nac;
 	}
-	public abstract double getSaldo(int hC);
-	public abstract void pagarSaldo(int hC);
+	public abstract double getSaldo(Integer hC);
+	public abstract void pagarSaldo(Integer hC);
 
 }

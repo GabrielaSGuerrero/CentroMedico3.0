@@ -4,42 +4,42 @@ import java.util.HashSet;
 
 public class Centro {
  
-	HashMap<Integer, Paciente> pacientes; 
-	HashMap<Integer, Medico> medicos;
+	HashMap<Integer, Paciente> pacientes; //No deja usar INT!! HAY Q CAMBIAR A INTEGER H.CLINICA DE PACIENTE
+	HashMap<Integer, Medico> medicos;        //iDEM
 	HashSet<Especialidad> especialidades; //sino un conjunto de tupla de String,double para nombre y valor
 	String CUIT;
 	String nombre;
 	double precioInternacion;
 
 	Centro (String CUIT, String nombre, double pInternacion){
+		this.CUIT = CUIT;
+		this.nombre = nombre;
+		this.precioInternacion = pInternacion;
+		this.pacientes = new HashMap<Integer, Paciente>();
+		this.medicos = new HashMap<Integer, Medico>();
+	}
+	@Override
+	public String toString() { //STRINGBUILDER!!!
+		return "----------"+this.nombre+"---------"+"CUIT: "+this.CUIT+"Profesionales: "+medicos.toString()+"Especialidades que ofrece el Centro: "
+				+"Pacientes del Centro:"+pacientes.toString()+"Precio de internaci�n por d�a: "+this.precioInternacion+"$";
+	}
 	
-	}
-/*	public void toString() {
-		System.out.println("----------"+this.nombre+"---------");
-		System.out.println("CUIT: "+this.CUIT); System.out.println("");
-		System.out.println("Profesionales: ");
-		medicos.toString();
-		System.out.println("Especialidades que ofrece el Centro: ");
-		//especialidades.toString;
-		System.out.println("Pacientes del Centro:"); 
-		pacientes.toString();
-		System.out.println("Precio de internaci�n por d�a: "+this.precioInternacion+"$");
-	}
-	*/
 	void agregarEspecialidad(String nombre, double valor) {
 		
 	}
-	void agregarMedico(String nombre, int matricula, String nomEspecialidad,double valorTratamiento) {
-		
+	void agregarMedico(String nombre, Integer matricula, String nomEspecialidad,double valorTratamiento) {
+		medicos.put(matricula, new Medico(nombre, matricula,valorTratamiento,nomEspecialidad));
+	}//asegurada la no repeticion porque .put lo garantiza dado que matricula es key
+	
+	void agregarPacientePrivado(String nombre, Integer hC, Fecha nac) {
+		pacientes.put(hC, new Privado(nombre, hC, nac));
 	}
-	void agregarPacientePrivado(String nombre, int hC, Fecha nac) {
-		
+	
+	void agregarPacienteAmbulatorio(String nombre, Integer hC, Fecha nac) {
+		pacientes.put(hC, new Ambulatorio(nombre, hC, nac));
 	}
-	void agregarPacienteAmbulatorio(String nombre, int hC, Fecha nac) {
-		
-	}
-	void agregarPacienteObraSocial(String nombre, int hC, Fecha nac, String	osocial, double p) {
-		
+	void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
+		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
 	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de	atenci�n en consultorio.
 		

@@ -17,7 +17,7 @@ public class Medico {
 		return honorarios;
 	}
 
-	public Especialidad getEspecialidad() {
+	public String getEspecialidad() {
 		return especialidad;
 	}
 

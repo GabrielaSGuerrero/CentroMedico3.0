@@ -6,7 +6,7 @@ public class Privado extends Paciente {
 	HashSet<tupla<Fecha, ConsExterno>> atencionesCE;
 
 
-	Privado(String n, int hC, Fecha nac) {
+	Privado(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
 		// TODO Auto-generated constructor stub
 	}
@@ -14,19 +14,19 @@ public class Privado extends Paciente {
 	public String toString() {
 		return super.toString()+"; Tipo: Privado";
 	}
-	public void nuevoGuardia (int Matricula, Fecha dia) {
+	public void nuevoGuardia (Integer Matricula, Fecha dia) {
 		
 	}
-	public void nuevoConsExterno(int Matricula, Fecha dia) {
+	public void nuevoConsExterno(Integer Matricula, Fecha dia) {
 		
 	}
 	@Override
-	public double getSaldo(int hC) {
+	public double getSaldo(Integer hC) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	@Override
-	public void pagarSaldo(int hC) {
+	public void pagarSaldo(Integer hC) {
 		// TODO Auto-generated method stub
 		
 	}

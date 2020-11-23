@@ -4,7 +4,7 @@ public class Ambulatorio extends Paciente {
 	
 	HashSet<Tratamiento> tratamientos;
 
-	Ambulatorio(String n, int hC, Fecha nac) {
+	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
 		// TODO Auto-generated constructor stub
 	}
@@ -12,16 +12,16 @@ public class Ambulatorio extends Paciente {
 	public String toString() {
 		return super.toString()+"; Tipo: Ambulatorio";
 	}
-	public void nuevoTratamiento( String nomTratamiento, int matricula) {
+	public void nuevoTratamiento( String nomTratamiento, Integer matricula) {
 		
 	}
 	@Override
-	public double getSaldo(int hC) {
+	public double getSaldo(Integer hC) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	@Override
-	public void pagarSaldo(int hC) {
+	public void pagarSaldo(Integer hC) {
 		// TODO Auto-generated method stub
 		
 	}

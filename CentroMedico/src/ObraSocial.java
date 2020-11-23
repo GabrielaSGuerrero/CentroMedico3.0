@@ -38,12 +38,12 @@ public class ObraSocial extends Paciente{
 		
 	}
 	@Override
-	public double getSaldo(int hC) {
+	public double getSaldo(Integer hC) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	@Override
-	public void pagarSaldo(int hC) {
+	public void pagarSaldo(Integer hC) {
 		// TODO Auto-generated method stub
 		
 	}
