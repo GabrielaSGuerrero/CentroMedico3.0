@@ -9,6 +9,32 @@ public class Fecha {
 		this.mes = mm;
 		this.anio = aa;
 	}
+	public boolean esMayor(Fecha f) {
+		if (this.dia<f.dia && this.mes<f.mes && this.anio<f.anio) {
+		return true;
+		}
+		else {
+			return false;}
+	}
+	
+	public int getDia() {
+		return dia;
+	}
+	public void setDia(int dia) {
+		this.dia = dia;
+	}
+	public int getMes() {
+		return mes;
+	}
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
+	public int getAnio() {
+		return anio;
+	}
+	public void setAnio(int anio) {
+		this.anio = anio;
+	}
 	@Override
 	public String toString() {
 		return this.dia+"/"+this.mes+"/"+this.anio;

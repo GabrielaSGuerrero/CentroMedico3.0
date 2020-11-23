@@ -53,11 +53,16 @@ public class Centro {
 		pacientes.get(hC).nuevaInternacion(area,fingreso);
 	}
 	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al pacienteinternado.
-		
+		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
 	void agregarTratamiento(int hC, int matricula, String atencion) {
 		
 	}
+	//AGREGO METODO PARA VER ALGO
+/*	void verInternaciones(Integer hc) {
+		pacientes.get(hc).getInternaciones();
+	}*/
+	
 	double getSaldo(int hC) {
 		return 0;
 	}

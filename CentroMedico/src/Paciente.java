@@ -1,3 +1,4 @@
+import java.util.HashSet;
 
 public abstract class Paciente {
 	String nombre;
@@ -25,5 +26,13 @@ public abstract class Paciente {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	public void altaInternacion(Fecha fechaAlta) {
+		// TODO Auto-generated method stub
+		
+	}
+/*	public HashSet<Internacion> getInternaciones() {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
 
 }

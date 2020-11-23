@@ -34,9 +34,15 @@ public class ObraSocial extends Paciente{
 		//atencionesInternacion.add(nueva);
 		
 	}
-	
+	@Override
 	public void altaInternacion (Fecha alta) {
-		
+		if (internaciones != null) {
+			for (Internacion i: internaciones) {
+				if (i.getFechaIngreso().esMayor(alta) && i.getFechaAlta().equals(new Fecha(0,0,0))) {
+					i.setFechaAlta(alta);
+				}
+			}
+		}
 	}
 	@Override
 	public double getSaldo(Integer hC) {
@@ -64,7 +70,6 @@ public class ObraSocial extends Paciente{
 	public HashSet<Internacion> getInternaciones(){
 		return internaciones;
 	}
-
 	
 	
 }
