@@ -21,7 +21,7 @@ public class ObraSocial extends Paciente{
 	public void nuevaInternacion (String area, Fecha dia) {
 		boolean existe= false;
 		for(Internacion i: internaciones) {
-			existe = existe || i.getFechaIngreso().equals(dia); //ver tema EQUALS!!!Ahora va a tirar falso xq son dif. direcc de memoria
+			existe = existe || i.getFechaIngreso().equals(dia); 
 		}
 		if (existe == false) {
 			internaciones.add(new Internacion(dia, area));
@@ -29,7 +29,6 @@ public class ObraSocial extends Paciente{
 		else {
 			System.out.println("Ya existe una internación con esa fecha");
 		}
-		//implementar verificacion de que no se repita fecha
 		//tupla<Fecha,Internacion> nueva = new tupla(dia, new Internacion(dia, area));
 		//atencionesInternacion.add(nueva);
 		
