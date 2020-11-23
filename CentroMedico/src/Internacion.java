@@ -7,15 +7,14 @@ public class Internacion {
 	Fecha fechaAlta;
 	double costoTotal;
 	String area;
-	int numHabitacion;
 
-	Internacion(Fecha ingreso, String area, int numHabitacion){
+	Internacion(Fecha ingreso, String area){
 		this.fecha = ingreso;
 		this.area = area;
 	}
 	@Override
 	public String toString() {
-		return "Area: "+area;
+		return "Area: "+area+"; Fecha ingreso: ";
 	}
 	
 }
