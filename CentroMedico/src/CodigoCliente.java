@@ -51,9 +51,11 @@ public class CodigoCliente {
 		System.out.println(p.toString());
 		((ObraSocial) p).nuevaInternacion("Cardiologia", new Fecha(20,11,2020)); //porqué tengo que castear?? :( revisar teoria
 		System.out.println(((ObraSocial) p).getInternaciones());
+		((ObraSocial) p).nuevaInternacion("Cardiologia", new Fecha(25,11,2020));
+		System.out.println(((ObraSocial) p).getInternaciones());
+		((ObraSocial) p).nuevaInternacion("Cardiologia", new Fecha(20,11,2020));
+		System.out.println(((ObraSocial) p).getInternaciones());
 		
-		Tratamiento t = new Tratamiento(15, "Pediatria");
-		System.out.println(t.toString());
 	}
 
 }

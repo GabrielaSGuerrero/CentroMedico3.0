@@ -14,7 +14,7 @@ public class Internacion {
 	}
 	@Override
 	public String toString() {
-		return "Area: "+area+"; Fecha ingreso: ";
+		return "Area: "+area+"-Fecha ingreso: "+this.fecha;
 	}
 	public Fecha getFechaIngreso() {
 		return fecha;
