@@ -11,7 +11,7 @@ public abstract class Paciente {
 	}
 	@Override
 	public String toString() {
-		return "PACIENTE hC: "+this.historiaClinica+ "; "+this.nombre+"; F.Nac: "+this.nac;
+		return "Paciente hC: "+this.historiaClinica+ "- "+this.nombre+"- F.Nac: "+this.nac;
 	}
 	public abstract double getSaldo(Integer hC);
 	public abstract void pagarSaldo(Integer hC);

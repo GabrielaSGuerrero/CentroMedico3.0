@@ -16,7 +16,7 @@ public class ObraSocial extends Paciente{
 	}
 	@Override
 	public String toString() {
-		return super.toString()+"; O.S.: "+this.obraSocial+"; Porcentaje: "+this.porcentaje;
+		return super.toString()+"- O.S.: "+this.obraSocial+"- Porcentaje: "+this.porcentaje;
 	}
 	@Override
 	public void nuevaInternacion (String area, Fecha dia) {

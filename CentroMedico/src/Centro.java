@@ -1,6 +1,8 @@
+import java.awt.List;
 import java.util.HashMap;
 import java.util.HashSet;
 //import java.util.Map;
+import java.util.LinkedList;
 
 public class Centro {
  
@@ -11,7 +13,7 @@ public class Centro {
 	String nombre;
 	double precioInternacion;
 
-	Centro (String CUIT, String nombre, double pInternacion){
+	Centro ( String nombre, String CUIT, double pInternacion){
 		this.CUIT = CUIT;
 		this.nombre = nombre;
 		this.precioInternacion = pInternacion;
@@ -20,8 +22,8 @@ public class Centro {
 	}
 	@Override
 	public String toString() { //STRINGBUILDER!!!
-		return "----------"+this.nombre+"---------"+"CUIT: "+this.CUIT+"Profesionales: "+medicos.toString()+"Especialidades que ofrece el Centro: "
-				+"Pacientes del Centro:"+pacientes.toString()+"Precio de internaci�n por d�a: "+this.precioInternacion+"$";
+		return "----------"+this.nombre+"---------"+"\nCUIT: "+this.CUIT+"\nProfesionales: "+medicos.toString()+"\nEspecialidades que ofrece el Centro: "
+				+"\nPacientes del Centro:"+pacientes.toString()+"\nPrecio de internacion por dia: "+this.precioInternacion+"$";
 	}
 	
 	void agregarEspecialidad(String nombre, double valor) {
@@ -63,6 +65,10 @@ public class Centro {
 		
 	}
 //	Map<Fecha, String> atencionesEnConsultorio(int hC){}
-//	public List<Integer> listaInternacion(){}
-
+	
+	public LinkedList<Integer> listaInternacion(){
+		LinkedList<Integer> nueva = new LinkedList<Integer>();
+		
+		return nueva;
+	}
 }
