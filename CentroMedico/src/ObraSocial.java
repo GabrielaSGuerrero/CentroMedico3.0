@@ -48,6 +48,19 @@ public class ObraSocial extends Paciente{
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public boolean estaInternado() {
+		if (internaciones != null) {
+			boolean internado=false;
+			for (Internacion i: internaciones) {
+				internado= internado || i.getFechaAlta().equals(new Fecha(0,0,0));
+			}
+			return internado;
+			}
+		else {
+		return false;}
+	}
+	
 	public HashSet<Internacion> getInternaciones(){
 		return internaciones;
 	}

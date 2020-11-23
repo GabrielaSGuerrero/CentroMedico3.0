@@ -11,6 +11,7 @@ public class Internacion {
 	Internacion(Fecha ingreso, String area){
 		this.fecha = ingreso;
 		this.area = area;
+		this.fechaAlta= new Fecha(0,0,0);
 	}
 	@Override
 	public String toString() {
@@ -18,5 +19,8 @@ public class Internacion {
 	}
 	public Fecha getFechaIngreso() {
 		return fecha;
+	}
+	public Fecha getFechaAlta() {
+		return fechaAlta;
 	}
 }

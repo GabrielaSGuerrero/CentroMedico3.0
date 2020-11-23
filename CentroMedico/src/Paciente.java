@@ -17,7 +17,13 @@ public abstract class Paciente {
 	public abstract void pagarSaldo(Integer hC);
 	public void nuevaInternacion(String area, Fecha dia) {
 		// TODO Auto-generated method stub
-		
+	}
+	public Integer getHC() {
+		return this.historiaClinica;
+	}
+	public boolean estaInternado() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

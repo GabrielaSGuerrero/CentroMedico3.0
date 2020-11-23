@@ -66,9 +66,14 @@ public class Centro {
 	}
 //	Map<Fecha, String> atencionesEnConsultorio(int hC){}
 	
-	public LinkedList<Integer> listaInternacion(){
+	public LinkedList<Integer> listaInternacion(){//Devuelve una lista con las hC de la pacientes internados
 		LinkedList<Integer> nueva = new LinkedList<Integer>();
-		
+		//por cada paciente de pacientes
+		for (Paciente value : pacientes.values()) {
+			if (value.estaInternado()){
+				nueva.add(value.getHC());
+			}
+		}
 		return nueva;
 	}
 }
