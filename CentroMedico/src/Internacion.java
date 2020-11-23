@@ -16,5 +16,7 @@ public class Internacion {
 	public String toString() {
 		return "Area: "+area+"; Fecha ingreso: ";
 	}
-	
+	public Fecha getFechaIngreso() {
+		return fecha;
+	}
 }
