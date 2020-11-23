@@ -48,7 +48,7 @@ public class Centro {
 		
 	}
 	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internaci�n.
-		
+		pacientes.get(hC).nuevaInternacion(area,fingreso);
 	}
 	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al pacienteinternado.
 		

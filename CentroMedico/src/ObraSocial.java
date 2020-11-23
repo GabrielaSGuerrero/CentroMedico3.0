@@ -18,6 +18,7 @@ public class ObraSocial extends Paciente{
 	public String toString() {
 		return super.toString()+"; O.S.: "+this.obraSocial+"; Porcentaje: "+this.porcentaje;
 	}
+	@Override
 	public void nuevaInternacion (String area, Fecha dia) {
 		boolean existe= false;
 		for(Internacion i: internaciones) {

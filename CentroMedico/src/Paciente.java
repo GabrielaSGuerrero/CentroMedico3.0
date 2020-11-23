@@ -15,5 +15,9 @@ public abstract class Paciente {
 	}
 	public abstract double getSaldo(Integer hC);
 	public abstract void pagarSaldo(Integer hC);
+	public void nuevaInternacion(String area, Fecha dia) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
