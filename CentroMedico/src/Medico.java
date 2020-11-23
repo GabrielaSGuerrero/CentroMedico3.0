@@ -1,11 +1,11 @@
 
 public class Medico {
 	String nombre;
-	int matricula;
+	Integer matricula;
 	double honorarios;
-	Especialidad especialidad;
+	String especialidad;
 
-	Medico (String n, int mat, double hono, Especialidad especialidad){ //Constructor
+	Medico (String n, Integer mat, double hono, String especialidad){ //Constructor
 		this.nombre = n;
 		this.matricula= mat;
 		this.honorarios= hono;
