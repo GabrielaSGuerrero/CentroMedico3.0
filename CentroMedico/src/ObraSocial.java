@@ -1,11 +1,9 @@
 import java.util.HashSet;
-import java.util.Iterator;
 
 public class ObraSocial extends Paciente{
 
 	String obraSocial;
 	double porcentaje;
-	//HashSet<tupla<Fecha, Internacion>> atencionesInternacion;
 	HashSet<Internacion> internaciones;
 	
 	ObraSocial(String n, int hC, Fecha nac, String OS, double p) {
@@ -74,9 +72,6 @@ public class ObraSocial extends Paciente{
 	}
 	
 	public void getInternaciones() {
-	/*	Iterator<Internacion> it= internaciones.iterator();
-		while(it.hasNext()) {
-			System.out.println(it); */
 		System.out.println(internaciones.toString());
 		}
 		
