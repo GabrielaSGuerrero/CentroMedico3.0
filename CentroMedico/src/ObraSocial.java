@@ -32,8 +32,13 @@ public class ObraSocial extends Paciente{
 			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
 			System.out.println("Ya existe una internacion con esa fecha");
 		}
+/*      -----OPCION 2------ :D
+
+		internaciones.add(new Internacion(dia, area));
 		
-		
+		PORQUE el metodo "add" de HashSet, agrega SOLO SI NO EXISTE un objeto igual, eso lo hace llamando
+		al equals de Internacion (en este caso). Como ya hice que el Equals pregunte por la fecha, si hay
+		una internacion con la misma fecha no se agregará en nuestro conjunto.    */
 	}
 	@Override
 	public void altaInternacion (Fecha alta) {
