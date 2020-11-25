@@ -10,11 +10,18 @@ public class Fecha {
 		this.anio = aa;
 	}
 	public boolean esMayor(Fecha f) {
-		if (this.dia<f.dia && this.mes<f.mes && this.anio<f.anio) {
-		return true;
+		if (this.anio<f.anio) {
+			return true;
+		}
+		if (this.anio==f.anio && this.mes<f.mes) {
+			return true;
+		}
+		if (this.anio==f.anio && this.mes==f.mes&& this.dia<f.dia) {
+			return true;
 		}
 		else {
-			return false;}
+			return false;
+		}
 	}
 	
 	public int getDia() {
@@ -36,12 +43,12 @@ public class Fecha {
 		this.anio = anio;
 	}
 	
-	public void setCalendario(int dia, int mes, int anio) {
+/*	public void setCalendario(int dia, int mes, int anio) {
 		this.dia=dia;
 		this.mes=mes;
 		this.anio=anio;
 	}
-	
+*/	
 	@Override
 	
 	public String toString() {
