@@ -1,3 +1,4 @@
+import java.util.HashMap;
 
 public abstract class Paciente {
 	String nombre;
@@ -45,6 +46,10 @@ public abstract class Paciente {
 	public void getInternaciones() {
 		// TODO Auto-generated method stub
 		
+	}
+	public HashMap<Fecha, String> atCE() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 		}

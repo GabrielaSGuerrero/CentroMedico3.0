@@ -1,22 +1,25 @@
 
 
-public class ConsExterno {
+public class ConsExterno  {
 	
 	boolean deuda;
 	int matricula;
 	Fecha fecha;
-	Especialidad especialidades;
+	Especialidad especialidad;
 	
 	ConsExterno(Especialidad esp ,int matricula,Fecha fecha){
 		this.fecha=fecha;
 		this.matricula=matricula;
-		this.especialidades=esp;
+		this.especialidad=esp;
 		
 		
 	}
 
 	public Fecha getFecha() {
-		return fecha;
+		return this.fecha;
+	}
+	public Especialidad getEspecialidad() {
+		return this.especialidad;
 	}
 
 	public boolean isDeuda() {
@@ -30,5 +33,7 @@ public class ConsExterno {
 	public void setFecha(Fecha fecha) {
 		this.fecha = fecha;
 	}
+
+	
 	
 }

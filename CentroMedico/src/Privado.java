@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Privado extends Paciente {
 	
@@ -45,6 +47,17 @@ public class Privado extends Paciente {
 			System.out.println("Ya existe una internacion con esa fecha");
 		}	
 	}
+	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?
+ 		HashMap<Fecha, String> registro = new HashMap<Fecha, String>();
+ 		if (atencionesCE != null) {
+	 		Iterator<ConsExterno> it = atencionesCE.iterator();
+	 		while (it.hasNext()) {
+	 			registro.put(((ConsExterno) it).getFecha(), ((ConsExterno) it).getEspecialidad().getNombre());
+	 		}
+ 		}
+ 		return registro;
+	}
+	
 	@Override
 	public double getSaldo(Integer hC) {
 		// TODO Auto-generated method stub

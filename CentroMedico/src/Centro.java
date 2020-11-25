@@ -48,16 +48,16 @@ public class Centro {
 	void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
-	void agregarAtencion(int hC, Fecha fecha, int matricula, Especialidad esp) { //en el caso de	atenci�n en consultorio.
+	void agregarAtencion(int hC, Fecha fecha, int matricula, Especialidad esp) { //en el caso de atencion en consultorio.
 			pacientes.get(hC).nuevoConsExterno(matricula,fecha,esp);
 	}
-	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atenci�n por	guardia.
+	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atencion por guardia.
 			pacientes.get(hC).nuevoGuardia(fecha);
 	}
-	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internaci�n.
+	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internacion.
 		pacientes.get(hC).nuevaInternacion(area,fingreso);
 	}
-	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al pacienteinternado.
+	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al paciente internado.
 		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
 	void agregarTratamiento(int hC, int matricula, String atencion) {
@@ -76,10 +76,13 @@ public class Centro {
 	void pagarSaldo(int hC) {
 		
 	}
-//	Map<Fecha, String> atencionesEnConsultorio(int hC){}
+	HashMap<Fecha, String> atencionesEnConsultorio(int hC){
+		return pacientes.get(hC).atCE();
+    }
+ 
 	
 	
-	public LinkedList<Integer> listaInternacion(){//Devuelve una lista con las hC de la pacientes internados
+	public LinkedList<Integer> listaInternacion(){  //Devuelve una lista con las hC de la pacientes internados
 		LinkedList<Integer> nueva = new LinkedList<Integer>();
 		//por cada paciente de pacientes
 		for (Paciente value : pacientes.values()) {

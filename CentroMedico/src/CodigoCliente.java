@@ -46,7 +46,7 @@ public class CodigoCliente {
 //		System.out.println("\nAgrego nueva atencion paciente 111...\n");
 //		centro.agregarAtencion(111, new Fecha(18,11,2020),77777);
 //		System.out.println("Atenciones paciente 111:");
-//		System.out.println(centro.atencionesEnConsultorio(111));
+		System.out.println(centro.atencionesEnConsultorio(111));
 
 		
 	}

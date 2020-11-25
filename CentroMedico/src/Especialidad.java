@@ -21,6 +21,11 @@ public class Especialidad {
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
+	
+
+	public String getNombre() {
+		return nombre;
+	}
 
 	@Override
 	public boolean equals(Object obj) { //Se genera con "nombre" para que cuando se agregue una nueva Especialidad
