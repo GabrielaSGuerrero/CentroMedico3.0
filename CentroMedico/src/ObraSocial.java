@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class ObraSocial extends Paciente{
 
@@ -28,15 +29,15 @@ public class ObraSocial extends Paciente{
 			internaciones.add(new Internacion(dia, area));
 		}
 		else {
-			System.out.println("Ya existe una internación con esa fecha");
+			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
+			System.out.println("Ya existe una internacion con esa fecha");
 		}
-		//tupla<Fecha,Internacion> nueva = new tupla(dia, new Internacion(dia, area));
-		//atencionesInternacion.add(nueva);
+		
 		
 	}
 	@Override
 	public void altaInternacion (Fecha alta) {
-		if (internaciones != null) {
+		if (internaciones!= null ) {
 			for (Internacion i: internaciones) {
 				if (i.getFechaIngreso().esMayor(alta) && i.getFechaAlta().equals(new Fecha(0,0,0))) {
 					i.setFechaAlta(alta);
@@ -67,9 +68,14 @@ public class ObraSocial extends Paciente{
 		return false;}
 	}
 	
-	public HashSet<Internacion> getInternaciones(){
-		return internaciones;
+	public void getInternaciones() {
+	/*	Iterator<Internacion> it= internaciones.iterator();
+		while(it.hasNext()) {
+			System.out.println(it); */
+		System.out.println(internaciones.toString());
+		}
+		
 	}
 	
 	
-}
+

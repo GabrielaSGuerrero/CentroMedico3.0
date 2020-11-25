@@ -1,16 +1,23 @@
 import java.util.HashSet;
 
 public class ConsExterno {
-
 	
-	
-/*
 	boolean deuda;
 	int matricula;
 	Fecha fecha;
-	HashSet<Especialidad> especialidades;
+	Especialidad especialidades;
 	
-	ConsExterno(Especialidad esp ;int matricula;double importe;Fecha fecha)
+	ConsExterno(Especialidad esp ,int matricula,Fecha fecha){
+		this.fecha=fecha;
+		this.matricula=matricula;
+		this.especialidades=esp;
+		
+		
+	}
+
+	public Fecha getFecha() {
+		return fecha;
+	}
 
 	public boolean isDeuda() {
 		return deuda;
@@ -23,5 +30,5 @@ public class ConsExterno {
 	public void setFecha(Fecha fecha) {
 		this.fecha = fecha;
 	}
-	*/
+	
 }

@@ -20,6 +20,7 @@ public class Centro {
 		this.precioInternacion = pInternacion;
 		this.pacientes = new HashMap<Integer, Paciente>();
 		this.medicos = new HashMap<Integer, Medico>();
+		this.especialidades = new HashSet<Especialidad> ();
 	}
 	@Override
 	public String toString() { //STRINGBUILDER!!!
@@ -27,12 +28,12 @@ public class Centro {
 				+"\nPacientes del Centro:"+pacientes.toString()+"\nPrecio de internacion por dia: "+this.precioInternacion+"$";
 	}
 	
-	/*boolean agregarEspecialidad(String nombre, double valor) {
+	void agregarEspecialidad(String nombre, double valor) {
 		
-			return especialidades.add(new Especialidad(nombre,valor));
+			 especialidades.add(new Especialidad(nombre,valor));
 	}
-		//chequear, la idea seria esta pero hay que darle forma, con el add ya nos aseguramos que no hay repetidos
-		*/ 
+		
+		 
 	
 			
 	void agregarMedico(String nombre, Integer matricula, String nomEspecialidad,double valorTratamiento) {
@@ -49,11 +50,11 @@ public class Centro {
 	void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
-	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de	atenci�n en consultorio.
-	
+	void agregarAtencion(int hC, Fecha fecha, int matricula, Especialidad esp) { //en el caso de	atenci�n en consultorio.
+			pacientes.get(hC).nuevoConsExterno(matricula,fecha,esp);
 	}
 	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atenci�n por	guardia.
-		
+			pacientes.get(hC).nuevoGuardia(fecha);
 	}
 	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internaci�n.
 		pacientes.get(hC).nuevaInternacion(area,fingreso);
@@ -62,12 +63,14 @@ public class Centro {
 		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
 	void agregarTratamiento(int hC, int matricula, String atencion) {
+		pacientes.get(hC).nuevoTratamiento(atencion,matricula);
 		
 	}
+	
 	//AGREGO METODO PARA VER ALGO
-/*	void verInternaciones(Integer hc) {
+	void verInternaciones(Integer hc) {
 		pacientes.get(hc).getInternaciones();
-	}*/
+	}
 	
 	double getSaldo(int hC) {
 		return 0;
@@ -76,6 +79,7 @@ public class Centro {
 		
 	}
 //	Map<Fecha, String> atencionesEnConsultorio(int hC){}
+	
 	
 	public LinkedList<Integer> listaInternacion(){//Devuelve una lista con las hC de la pacientes internados
 		LinkedList<Integer> nueva = new LinkedList<Integer>();

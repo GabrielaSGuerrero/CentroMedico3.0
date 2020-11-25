@@ -35,7 +35,15 @@ public class Fecha {
 	public void setAnio(int anio) {
 		this.anio = anio;
 	}
+	
+	public void setCalendario(int dia, int mes, int anio) {
+		this.dia=dia;
+		this.mes=mes;
+		this.anio=anio;
+	}
+	
 	@Override
+	
 	public String toString() {
 		return this.dia+"/"+this.mes+"/"+this.anio;
 	}

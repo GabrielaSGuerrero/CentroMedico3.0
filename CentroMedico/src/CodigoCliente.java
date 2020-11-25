@@ -4,9 +4,9 @@ public class CodigoCliente {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Centro centro=new Centro("Centro Medico Dolores Fuentes","30-36542563-0",3000);
-	//	centro.agregarEspecialidad("Pediatria",2000);
-	//	centro.agregarEspecialidad("Cardiologia",3000);
-	//	centro.agregarEspecialidad("Traumatologia",2500);
+		centro.agregarEspecialidad("Pediatria",2000);
+		centro.agregarEspecialidad("Cardiologia",3000);
+		centro.agregarEspecialidad("Traumatologia",2500);
 		centro.agregarMedico("Dr Perez", 55555, "Pediatria", 5000);
 		centro.agregarMedico("Dr Rodriguez", 66666, "Cardiologia", 8000);
 		centro.agregarMedico("Dr Curetta", 77777, "Traumatologia", 2000);
@@ -24,12 +24,13 @@ public class CodigoCliente {
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		System.out.println("\nSe da de alta la internacion...\n");
 		centro.altaInternacion(222, new Fecha(14,11,2020));
+		centro.verInternaciones(222);
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		System.out.println("\nSe agregan dos nuevas internaciones...\n");
 		centro.agregarInternacion(222,"General",new Fecha(16,11,2020));
 		centro.agregarInternacion(444,"Pediatria",new Fecha(17,11,2020));
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
-//		centro.agregarTratamiento(333, 66666, "Angioplastia");
+		centro.agregarTratamiento(333, 66666, "Angioplastia");
 		System.out.println("\n\n" + centro.toString());
 //		System.out.println("Deuda paciente HC 111: " + centro.getSaldo(111));
 //		System.out.println("Deuda paciente HC 222: " + centro.getSaldo(222));

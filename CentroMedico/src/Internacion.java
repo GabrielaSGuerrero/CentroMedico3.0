@@ -24,6 +24,6 @@ public class Internacion {
 		return fechaAlta;
 	}
 	public void setFechaAlta(Fecha f) {
-		this.fechaAlta = f;
+		this.fechaAlta.setCalendario(f.getDia(), f.getMes(), f.getAnio());
 	}
 }

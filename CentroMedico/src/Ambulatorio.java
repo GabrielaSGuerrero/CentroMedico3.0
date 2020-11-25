@@ -6,6 +6,7 @@ public class Ambulatorio extends Paciente {
 
 	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
+		this.tratamientos=new HashSet<Tratamiento>();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
@@ -13,7 +14,7 @@ public class Ambulatorio extends Paciente {
 		return super.toString()+"; Tipo: Ambulatorio";
 	}
 	public void nuevoTratamiento( String nomTratamiento, Integer matricula) {
-		
+		tratamientos.add(new Tratamiento(matricula,nomTratamiento));
 	}
 	@Override
 	public double getSaldo(Integer hC) {

@@ -29,15 +29,30 @@ public abstract class Paciente {
 		return false;
 	}
 	public void  altaInternacion(Fecha fechaAlta) {
-		// TODO Auto-generated method stub
-		//if(fechaAlta.esMayor(f)) {
-			
+		// TODO Auto-generated method stub		
 		}
+	public void nuevoTratamiento(String atencion, int matricula) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void nuevoConsExterno(int matricula, Fecha fecha, Especialidad esp) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void nuevoGuardia(Fecha fecha) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void getInternaciones() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 		}
 	
 /*	public HashSet<Internacion> getInternaciones() {
 		// TODO Auto-generated method stub
+		 * 
 		return null;
 	}*/
 

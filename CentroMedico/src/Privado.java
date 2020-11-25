@@ -2,23 +2,48 @@ import java.util.HashSet;
 
 public class Privado extends Paciente {
 	
-	HashSet<tupla<Fecha, Guardia>> atencionesGuardia;
-	HashSet<tupla<Fecha, ConsExterno>> atencionesCE;
+	HashSet<Guardia> atencionesGuardia;
+	HashSet<ConsExterno> atencionesCE;
 
 
 	Privado(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
+		this.atencionesGuardia= new HashSet<Guardia>();
+		this.atencionesCE= new HashSet<ConsExterno>();
+		
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return super.toString()+"; Tipo: Privado";
 	}
-	public void nuevoGuardia (Integer Matricula, Fecha dia) {
+	public void nuevoGuardia ( Fecha dia) { //eliminamos Interger matricula como parametro
 		
+		boolean existe= false;
+		for(Guardia i: atencionesGuardia) {
+			existe = existe || i.getFecha().equals(dia); 
+		}
+		if (existe == false) {
+			atencionesGuardia.add(new Guardia(dia));
+		}
+		else {
+			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
+			System.out.println("Ya existe una internacion con esa fecha");
+		}	
 	}
-	public void nuevoConsExterno(Integer Matricula, Fecha dia) {
-		
+	
+	public void nuevoConsExterno(Integer matricula, Fecha dia, Especialidad esp) {
+		boolean existe= false;
+		for(ConsExterno i: atencionesCE) {
+			existe = existe || i.getFecha().equals(dia); 
+		}
+		if (existe == false) {
+			atencionesCE.add(new ConsExterno(esp,matricula,dia));
+		}
+		else {
+			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
+			System.out.println("Ya existe una internacion con esa fecha");
+		}	
 	}
 	@Override
 	public double getSaldo(Integer hC) {
