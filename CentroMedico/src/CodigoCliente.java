@@ -31,18 +31,23 @@ public class CodigoCliente {
 		centro.agregarInternacion(222,"General",new Fecha(16,11,2020));
 		centro.agregarInternacion(444,"Pediatria",new Fecha(17,11,2020));
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
-		centro.agregarTratamiento(333, 66666, "Angioplastia");
+		
+		System.out.println("\nVERIFICACION :(\n "+centro.verPaciente(333));
+		//System.out.println("agregar nuevo tto: " + centro.agregarTratamiento(333, 66666, "Angioplastia"));
+		System.out.println("agregar nuevo tto: " + centro.getPaciente(333).nuevoTratamiento("Angioplastia", 66666, 15 ));
+		System.out.println(" "+centro.verPaciente(333));
+		
 		System.out.println("\n\n" + centro.toString());
 		System.out.println("\n Deuda paciente HC 111: " + centro.getSaldo(111));
 		System.out.println("Deuda paciente HC 222: " + centro.getSaldo(222));
-//		System.out.println("Deuda paciente HC 333: " + centro.getSaldo(333));
-//		System.out.println("\nSaldando deudas...\n");
-//		centro.pagarSaldo(111);
-//		centro.pagarSaldo(333);
-//		centro.pagarSaldo(222);
-//		System.out.println("Deuda paciente HC 111: " + centro.getSaldo(111));
-//		System.out.println("Deuda paciente HC 222: " + centro.getSaldo(222));
-//		System.out.println("Deuda paciente HC 333: " + centro.getSaldo(333));
+		System.out.println("Deuda paciente HC 333: " + centro.getSaldo(333));
+		System.out.println("\nSaldando deudas...\n");
+		centro.pagarSaldo(111);
+		centro.pagarSaldo(333);
+		centro.pagarSaldo(222);
+		System.out.println("Deuda paciente HC 111: " + centro.getSaldo(111));
+		System.out.println("Deuda paciente HC 222: " + centro.getSaldo(222));
+		System.out.println("Deuda paciente HC 333: " + centro.getSaldo(333));
 		System.out.println("\n\n"+centro.toString());
 		System.out.println("\nAgrego nueva atencion paciente 111...\n");
 		centro.agregarAtencion(111, new Fecha(18,11,2020),77777);

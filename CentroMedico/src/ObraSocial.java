@@ -59,9 +59,9 @@ public class ObraSocial extends Paciente{
 		return estadoCuenta;
 	}
 	@Override
-	public void pagarSaldo(Integer hC) {
+	public void pagarSaldo() {
 		// TODO Auto-generated method stub
-		
+		estadoCuenta = 0;
 	}
 	@Override
 	public boolean estaInternado() {

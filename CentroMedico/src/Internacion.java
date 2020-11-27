@@ -1,10 +1,8 @@
 
 public class Internacion {
 	double valor;
-	boolean deuda;
 	Fecha fecha;
 	Fecha fechaAlta;
-	double costoTotal;
 	String area;
 
 	Internacion(Fecha ingreso, String area, double valor){

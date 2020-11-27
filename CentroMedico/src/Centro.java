@@ -57,21 +57,29 @@ public class Centro {
 	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al paciente internado.
 		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
-	void agregarTratamiento(int hC, int matricula, String atencion) {
-		//facilitar precio de medico
-		pacientes.get(hC).nuevoTratamiento(atencion,matricula);
+	boolean agregarTratamiento(int hC, int matricula, String atencion) {
+		double hon = medicos.get(matricula).getHonorarios();
+		System.out.println("honorario="+hon);
+		return pacientes.get(hC).nuevoTratamiento(atencion,matricula, hon);
 	}
 	
 	//AGREGO METODO PARA VER ALGO
 	void verInternaciones(Integer hc) {
 		pacientes.get(hc).getInternaciones();
 	}
+	//otro
+	String verPaciente(Integer hC) {
+		return pacientes.get(hC).toString();
+	}
+	Paciente getPaciente (Integer hC) {
+		return pacientes.get(hC);
+	}
 	
 	double getSaldo(int hC) {
 		return pacientes.get(hC).getSaldo();
 	}
 	void pagarSaldo(int hC) {
-		
+		pacientes.get(hC).pagarSaldo();
 	}
 	
 	public HashMap<Fecha, String> atencionesEnConsultorio(int hC){

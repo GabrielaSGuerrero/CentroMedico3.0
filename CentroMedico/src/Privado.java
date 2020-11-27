@@ -71,9 +71,9 @@ public class Privado extends Paciente {
 		return estadoCuenta;
 	}
 	@Override
-	public void pagarSaldo(Integer hC) {
+	public void pagarSaldo() {
 		// TODO Auto-generated method stub
-		
+		estadoCuenta = 0;
 	}
 
 

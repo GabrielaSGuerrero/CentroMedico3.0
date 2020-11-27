@@ -15,7 +15,7 @@ public abstract class Paciente {
 		return "Paciente hC: "+this.historiaClinica+ "- "+this.nombre+"- F.Nac: "+this.nac;
 	}
 	public abstract double getSaldo();
-	public abstract void pagarSaldo(Integer hC);
+	public abstract void pagarSaldo();
 	public void nuevaInternacion(String area, Fecha dia, double precioInternacion) {
 		// TODO Auto-generated method stub
 	}
@@ -31,9 +31,9 @@ public abstract class Paciente {
 	public void  altaInternacion(Fecha fechaAlta) {
 		// TODO Auto-generated method stub		
 		}
-	public void nuevoTratamiento(String atencion, int matricula) {
+	public boolean nuevoTratamiento(String atencion, int matricula, double hon) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 	
 	public void nuevoGuardia(Fecha fecha) {
@@ -54,6 +54,10 @@ public abstract class Paciente {
 	}
 	public void nuevoConsExterno(Integer matricula, Fecha dia, String especialidad, double precio) {
 		// TODO Auto-generated method st
+	}
+	public boolean nuevoTratamiento(String nomTratamiento, Integer matricula, double honorario) {
+		// TODO Auto-generated method stub
+		return true;
 	}
 	
 		}

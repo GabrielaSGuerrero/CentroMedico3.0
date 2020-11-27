@@ -1,22 +1,25 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Ambulatorio extends Paciente {
 	
-	HashSet<Tratamiento> tratamientos;
+	ArrayList<Tratamiento> tratamientos;
 	double estadoCuenta;
 
 	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
-		this.tratamientos=new HashSet<Tratamiento>();
+		this.tratamientos=new ArrayList<Tratamiento>();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return super.toString()+"; Tipo: Ambulatorio";
+		return super.toString()+"; Tipo: Ambulatorio"+ "- Ttos: "+tratamientos.toString();
 	}
-	public void nuevoTratamiento( String nomTratamiento, Integer matricula) {
-		tratamientos.add(new Tratamiento(matricula,nomTratamiento));
-		//estadoCuenta = estadoCuenta + ... ;
+	@Override
+	public boolean nuevoTratamiento( String nomTratamiento, Integer matricula, double honorario) {
+		
+		estadoCuenta = estadoCuenta + honorario;
+		return tratamientos.add(new Tratamiento(matricula,nomTratamiento));
 	}
 	@Override
 	public double getSaldo() {
@@ -24,9 +27,9 @@ public class Ambulatorio extends Paciente {
 		return estadoCuenta;
 	}
 	@Override
-	public void pagarSaldo(Integer hC) {
+	public void pagarSaldo() {
 		// TODO Auto-generated method stub
-		
+		estadoCuenta = 0;
 	}
 
 }
