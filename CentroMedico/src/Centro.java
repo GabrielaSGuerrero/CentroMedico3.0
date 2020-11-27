@@ -43,7 +43,7 @@ public class Centro {
 	void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
-	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
+	void agregarAtencion(Integer hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
 			String esp = medicos.get(matricula).getEspecialidad();
 			double hon = medicos.get(matricula).getHonorarios();
 			pacientes.get(hC).nuevoConsExterno(matricula,fecha, esp,hon);

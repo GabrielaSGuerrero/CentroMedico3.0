@@ -35,10 +35,7 @@ public abstract class Paciente {
 		// TODO Auto-generated method stub
 		
 	}
-	public void nuevoConsExterno(int matricula, Fecha fecha, String esp, double hon) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	public void nuevoGuardia(Fecha fecha) {
 		// TODO Auto-generated method stub
 		
@@ -54,6 +51,9 @@ public abstract class Paciente {
 	public void getCE() {
 		// TODO Auto-generated method stub
 		
+	}
+	public void nuevoConsExterno(Integer matricula, Fecha dia, String especialidad, double precio) {
+		// TODO Auto-generated method st
 	}
 	
 		}

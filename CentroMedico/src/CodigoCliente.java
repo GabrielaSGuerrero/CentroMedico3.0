@@ -25,7 +25,7 @@ public class CodigoCliente {
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		System.out.println("\nSe da de alta la internacion...\n");
 		centro.altaInternacion(222, new Fecha(14,11,2020));
-		centro.verInternaciones(222);
+	//	centro.verInternaciones(222); Es metodo propio, borrar al final.
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		System.out.println("\nSe agregan dos nuevas internaciones...\n");
 		centro.agregarInternacion(222,"General",new Fecha(16,11,2020));
@@ -33,7 +33,7 @@ public class CodigoCliente {
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		centro.agregarTratamiento(333, 66666, "Angioplastia");
 		System.out.println("\n\n" + centro.toString());
-		System.out.println("Deuda paciente HC 111: " + centro.getSaldo(111));
+		System.out.println("\n Deuda paciente HC 111: " + centro.getSaldo(111));
 //		System.out.println("Deuda paciente HC 222: " + centro.getSaldo(222));
 //		System.out.println("Deuda paciente HC 333: " + centro.getSaldo(333));
 //		System.out.println("\nSaldando deudas...\n");
@@ -48,6 +48,7 @@ public class CodigoCliente {
 		centro.agregarAtencion(111, new Fecha(18,11,2020),77777);
 		System.out.println("Atenciones paciente 111:");
 		System.out.println(centro.atencionesEnConsultorio(111));
+		
 
 		
 	}

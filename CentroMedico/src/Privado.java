@@ -35,7 +35,7 @@ public class Privado extends Paciente {
 		}	*/
 		atencionesGuardia.add(new Guardia(dia));
 	}
-	
+	@Override
 	public void nuevoConsExterno(Integer matricula, Fecha dia, String especialidad, double precio) {
 	/*	boolean existe= false;
 		for(ConsExterno i: atencionesCE) {
@@ -48,15 +48,18 @@ public class Privado extends Paciente {
 			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
 			System.out.println("Ya existe una internacion con esa fecha");
 		}	*/
-		atencionesCE.add(new ConsExterno(matricula,dia,especialidad));
 		estadoCuenta= estadoCuenta+precio;
+		atencionesCE.add(new ConsExterno(matricula,dia,especialidad));
+		
 	}
 	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?
+		
  		HashMap<Fecha, String> registro = new HashMap<Fecha, String>();
+ 		
  		if (atencionesCE != null) {
 	 		Iterator<ConsExterno> it = atencionesCE.iterator();
 	 		while (it.hasNext()) {
-	 			registro.put(((ConsExterno) it).getFecha(), ((ConsExterno) it).getEspecialidad());
+	 			registro.put((((ConsExterno) it).getFecha()), ((ConsExterno) it).getEspecialidad());
 	 		}
  		}
  		return registro;
@@ -72,6 +75,7 @@ public class Privado extends Paciente {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 
 }
