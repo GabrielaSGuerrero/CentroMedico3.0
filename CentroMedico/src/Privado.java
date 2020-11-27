@@ -34,7 +34,7 @@ public class Privado extends Paciente {
 		atencionesGuardia.add(new Guardia(dia));
 	}
 	
-	public void nuevoConsExterno(Integer matricula, Fecha dia, Especialidad esp) {
+	public void nuevoConsExterno(Integer matricula, Fecha dia) {
 	/*	boolean existe= false;
 		for(ConsExterno i: atencionesCE) {
 			existe = existe || i.getFecha().equals(dia); 
@@ -46,9 +46,9 @@ public class Privado extends Paciente {
 			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
 			System.out.println("Ya existe una internacion con esa fecha");
 		}	*/
-		atencionesCE.add(new ConsExterno(esp,matricula,dia));
+		atencionesCE.add(new ConsExterno(matricula,dia));
 	}
-	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?
+/*	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?
  		HashMap<Fecha, String> registro = new HashMap<Fecha, String>();
  		if (atencionesCE != null) {
 	 		Iterator<ConsExterno> it = atencionesCE.iterator();
@@ -57,7 +57,7 @@ public class Privado extends Paciente {
 	 		}
  		}
  		return registro;
-	}
+	}*/
 	
 	@Override
 	public double getSaldo(Integer hC) {

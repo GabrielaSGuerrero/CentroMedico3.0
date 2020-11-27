@@ -26,14 +26,9 @@ public class Centro {
 				+"\nPacientes del Centro:"+pacientes.toString()+"\nPrecio de internacion por dia: "+this.precioInternacion+"$";
 	}
 	
-	void agregarEspecialidad(String nombre, double valor) {
-		
+	void agregarEspecialidad(String nombre, double valor) {	
 			 especialidades.add(new Especialidad(nombre,valor));
 	}
-		
-		 
-	
-			
 	void agregarMedico(String nombre, Integer matricula, String nomEspecialidad,double valorTratamiento) {
 		medicos.put(matricula, new Medico(nombre, matricula,valorTratamiento,nomEspecialidad));
 	}//asegurada la no repeticion porque .put lo garantiza dado que matricula es key
@@ -48,8 +43,8 @@ public class Centro {
 	void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
-	void agregarAtencion(int hC, Fecha fecha, int matricula, Especialidad esp) { //en el caso de atencion en consultorio.
-			pacientes.get(hC).nuevoConsExterno(matricula,fecha,esp);
+	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
+			pacientes.get(hC).nuevoConsExterno(matricula,fecha);
 	}
 	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atencion por guardia.
 			pacientes.get(hC).nuevoGuardia(fecha);

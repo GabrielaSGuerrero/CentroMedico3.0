@@ -35,7 +35,7 @@ public abstract class Paciente {
 		// TODO Auto-generated method stub
 		
 	}
-	public void nuevoConsExterno(int matricula, Fecha fecha, Especialidad esp) {
+	public void nuevoConsExterno(int matricula, Fecha fecha) {
 		// TODO Auto-generated method stub
 		
 	}
