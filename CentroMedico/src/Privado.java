@@ -59,7 +59,7 @@ public class Privado extends Paciente {
  		if (atencionesCE != null) {
 	 		Iterator<ConsExterno> it = atencionesCE.iterator();
 	 		while (it.hasNext()) {
-	 			registro.put(it.next().getFecha(),it.next().getEspecialidad());
+	 			registro.put(it.next().getFecha(), it.next().getEspecialidad());
 	 		}
  		}
  		return registro;

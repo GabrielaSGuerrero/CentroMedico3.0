@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Fecha {
 	int dia;
@@ -23,7 +26,39 @@ public class Fecha {
 			return false;
 		}
 	}
+	public static Fecha hoy() {
+		LocalDate fecha = LocalDate.now();
+		return new Fecha(fecha.getDayOfMonth(), fecha.getMonthValue(), fecha.getYear());
+		}
 	
+	public int diferenciaDias(Fecha fin) {
+		Calendar fInicio = Calendar.getInstance();
+		fInicio.set(this.anio, this.mes, this.dia);
+		fInicio.set(Calendar.HOUR, 0);
+		fInicio.set(Calendar.HOUR_OF_DAY, 0);
+		fInicio.set(Calendar.MINUTE, 0);
+		fInicio.set(Calendar.SECOND, 0);
+		
+		Calendar fFinal = Calendar.getInstance();
+		fFinal.set(fin.anio, fin.mes, fin.dia);
+		fFinal.set(Calendar.HOUR, 0);
+		fFinal.set(Calendar.HOUR_OF_DAY, 0);
+		fFinal.set(Calendar.MINUTE, 0);
+		fFinal.set(Calendar.SECOND, 0);
+		
+		long fInicioMs = fInicio.getTimeInMillis();
+		long fFinalMs = fFinal.getTimeInMillis();
+		
+		int dias = (int) (Math.abs(fFinalMs-fInicioMs)/ (1000*60*60*24));
+		
+		return dias;
+	}
+/*	public int diferenciaDias(Fecha ini, Fecha fin) {
+		long fechaInicialMs = ini.getTime();
+		long fechaFinalMs = fin.getTime();
+		long diferencia = fechaFinalMs - fechaInicialMs;
+		double dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+	}*/
 	public int getDia() {
 		return dia;
 	}

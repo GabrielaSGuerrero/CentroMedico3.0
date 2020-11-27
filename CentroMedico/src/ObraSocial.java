@@ -47,7 +47,8 @@ public class ObraSocial extends Paciente{
 			for (Internacion i: internaciones) {
 				if (i.getFechaIngreso().esMayor(alta) && i.getFechaAlta().equals(new Fecha(0,0,0))) {
 					i.setFechaAlta(alta);
-					//estadoCuenta = estadoCuenta + calcular los dias de internacion* precio - porcentaje
+					int cantDias = i.getFechaIngreso().diferenciaDias(i.getFechaAlta());
+					estadoCuenta = estadoCuenta + cantDias*(i.getValor()*porcentaje/100);
 				}
 			}
 		}
