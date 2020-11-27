@@ -3,6 +3,7 @@ import java.util.HashSet;
 public class Ambulatorio extends Paciente {
 	
 	HashSet<Tratamiento> tratamientos;
+	double estadoCuenta;
 
 	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
@@ -15,11 +16,12 @@ public class Ambulatorio extends Paciente {
 	}
 	public void nuevoTratamiento( String nomTratamiento, Integer matricula) {
 		tratamientos.add(new Tratamiento(matricula,nomTratamiento));
+		//estadoCuenta = estadoCuenta + ... ;
 	}
 	@Override
-	public double getSaldo(Integer hC) {
+	public double getSaldo() {
 		// TODO Auto-generated method stub
-		return 0;
+		return estadoCuenta;
 	}
 	@Override
 	public void pagarSaldo(Integer hC) {

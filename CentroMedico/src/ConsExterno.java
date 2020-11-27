@@ -5,10 +5,13 @@ public class ConsExterno  {
 	boolean deuda;
 	int matricula;
 	Fecha fecha;
+	String especialidad;
 	
-	ConsExterno(int matricula,Fecha fecha){
+	ConsExterno(int matricula,Fecha fecha, String esp){
 		this.fecha=fecha;
 		this.matricula=matricula;
+		this.especialidad = esp;
+		this.deuda=true;
 	}
 	
 	public Fecha getFecha() {
@@ -21,6 +24,9 @@ public class ConsExterno  {
 
 	public void setDeuda(boolean deuda) {
 		this.deuda = deuda;
+	}
+	public String getEspecialidad() {
+		return this.especialidad;
 	}
 
 	public void setFecha(Fecha fecha) {

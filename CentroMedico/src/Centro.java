@@ -44,20 +44,22 @@ public class Centro {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
 	void agregarAtencion(int hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
-			pacientes.get(hC).nuevoConsExterno(matricula,fecha);
+			String esp = medicos.get(matricula).getEspecialidad();
+			double hon = medicos.get(matricula).getHonorarios();
+			pacientes.get(hC).nuevoConsExterno(matricula,fecha, esp,hon);
 	}
 	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atencion por guardia.
-			pacientes.get(hC).nuevoGuardia(fecha);
+		pacientes.get(hC).nuevoGuardia(fecha);
 	}
 	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internacion.
-		pacientes.get(hC).nuevaInternacion(area,fingreso);
+		pacientes.get(hC).nuevaInternacion(area,fingreso,precioInternacion);
 	}
 	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al paciente internado.
 		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
 	void agregarTratamiento(int hC, int matricula, String atencion) {
+		//facilitar precio de medico
 		pacientes.get(hC).nuevoTratamiento(atencion,matricula);
-		
 	}
 	
 	//AGREGO METODO PARA VER ALGO
@@ -66,12 +68,13 @@ public class Centro {
 	}
 	
 	double getSaldo(int hC) {
-		return 0;
+		return pacientes.get(hC).getSaldo();
 	}
 	void pagarSaldo(int hC) {
 		
 	}
-	HashMap<Fecha, String> atencionesEnConsultorio(int hC){
+	
+	public HashMap<Fecha, String> atencionesEnConsultorio(int hC){
 		return pacientes.get(hC).atCE();
     }
  

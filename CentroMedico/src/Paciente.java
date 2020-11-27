@@ -14,9 +14,9 @@ public abstract class Paciente {
 	public String toString() {
 		return "Paciente hC: "+this.historiaClinica+ "- "+this.nombre+"- F.Nac: "+this.nac;
 	}
-	public abstract double getSaldo(Integer hC);
+	public abstract double getSaldo();
 	public abstract void pagarSaldo(Integer hC);
-	public void nuevaInternacion(String area, Fecha dia) {
+	public void nuevaInternacion(String area, Fecha dia, double precioInternacion) {
 		// TODO Auto-generated method stub
 	}
 	public Integer getHC() {
@@ -35,7 +35,7 @@ public abstract class Paciente {
 		// TODO Auto-generated method stub
 		
 	}
-	public void nuevoConsExterno(int matricula, Fecha fecha) {
+	public void nuevoConsExterno(int matricula, Fecha fecha, String esp, double hon) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -50,6 +50,10 @@ public abstract class Paciente {
 	public HashMap<Fecha, String> atCE() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	public void getCE() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 		}

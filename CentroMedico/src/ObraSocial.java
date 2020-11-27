@@ -5,6 +5,7 @@ public class ObraSocial extends Paciente{
 	String obraSocial;
 	double porcentaje;
 	HashSet<Internacion> internaciones;
+	double estadoCuenta;
 	
 	ObraSocial(String n, int hC, Fecha nac, String OS, double p) {
 		super(n, hC, nac);
@@ -18,7 +19,7 @@ public class ObraSocial extends Paciente{
 		return super.toString()+"- O.S.: "+this.obraSocial+"- Porcentaje: "+this.porcentaje;
 	}
 	@Override
-	public void nuevaInternacion (String area, Fecha dia) {
+	public void nuevaInternacion (String area, Fecha dia, double precioDia) {
 	/*------OPCION 1-------------------
 	 * boolean existe= false;
 		for(Internacion i: internaciones) {
@@ -37,7 +38,7 @@ public class ObraSocial extends Paciente{
 		al equals de Internacion (en este caso). Como ya hice que el Equals pregunte por la fecha, si hay
 		una internacion con la misma fecha no se agregará en nuestro conjunto.    */
 
-		internaciones.add(new Internacion(dia, area));		
+		internaciones.add(new Internacion(dia, area,precioDia));		
 	}
 	
 	@Override
@@ -46,14 +47,15 @@ public class ObraSocial extends Paciente{
 			for (Internacion i: internaciones) {
 				if (i.getFechaIngreso().esMayor(alta) && i.getFechaAlta().equals(new Fecha(0,0,0))) {
 					i.setFechaAlta(alta);
+					//estadoCuenta = estadoCuenta + calcular los dias de internacion* precio - porcentaje
 				}
 			}
 		}
 	}
 	@Override
-	public double getSaldo(Integer hC) {
+	public double getSaldo() {
 		// TODO Auto-generated method stub
-		return 0;
+		return estadoCuenta;
 	}
 	@Override
 	public void pagarSaldo(Integer hC) {

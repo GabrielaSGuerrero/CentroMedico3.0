@@ -2,17 +2,18 @@
 public class Internacion {
 	double valor;
 	boolean deuda;
-	//int matricula;
 	Fecha fecha;
 	Fecha fechaAlta;
 	double costoTotal;
 	String area;
 
-	Internacion(Fecha ingreso, String area){
+	Internacion(Fecha ingreso, String area, double valor){
 		this.fecha = ingreso;
 		this.area = area;
 		this.fechaAlta= new Fecha(0,0,0); //se crea por defecto esta fecha para evitar nullPointerExcetions en otros metodos
+		this.valor= valor;
 	}
+	
 	@Override
 	public String toString() {
 		return "Area: "+area+"-Fecha ingreso: "+this.fecha+"-Fecha alta: "+fechaAlta;
@@ -25,7 +26,7 @@ public class Internacion {
 	}
 	public void setFechaAlta(Fecha f) {
 		this.fechaAlta = f;
-		//this.fechaAlta.setCalendario(f.getDia(), f.getMes(), f.getAnio());
+		//hacer la cuenta de cantidad de dias y llenar costoTotal
 	}
 	@Override
 	public int hashCode() {
