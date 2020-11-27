@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Fecha {
 	int dia;
@@ -53,12 +52,7 @@ public class Fecha {
 		
 		return dias;
 	}
-/*	public int diferenciaDias(Fecha ini, Fecha fin) {
-		long fechaInicialMs = ini.getTime();
-		long fechaFinalMs = fin.getTime();
-		long diferencia = fechaFinalMs - fechaInicialMs;
-		double dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-	}*/
+
 	public int getDia() {
 		return dia;
 	}
@@ -78,14 +72,7 @@ public class Fecha {
 		this.anio = anio;
 	}
 	
-/*	public void setCalendario(int dia, int mes, int anio) {
-		this.dia=dia;
-		this.mes=mes;
-		this.anio=anio;
-	}
-*/	
 	@Override
-	
 	public String toString() {
 		return this.dia+"/"+this.mes+"/"+this.anio;
 	}
@@ -115,9 +102,5 @@ public class Fecha {
 			return false;
 		return true;
 	}
-	
-	//public void hoy(){}
-	
-	
 		
 }

@@ -39,6 +39,8 @@ public class CodigoCliente {
 		//System.out.println("agregar nuevo tto: " + centro.agregarTratamiento(333, 66666, "Angioplastia"));
 		System.out.println("agregar nuevo tto: " + centro.getPaciente(333).nuevoTratamiento("Angioplastia", 66666, 15 ));
 		System.out.println(" "+centro.verPaciente(333));
+		Tratamiento t= new Tratamiento(3333,"HHH");
+		System.out.println("Nuevo tto solo: "+t);
 		
 		System.out.println("\n\n" + centro.toString());
 		

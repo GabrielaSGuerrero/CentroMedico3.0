@@ -8,19 +8,20 @@ public class Ambulatorio extends Paciente {
 
 	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
-		this.tratamientos=new ArrayList<Tratamiento>();
-		// TODO Auto-generated constructor stub
+		this.tratamientos = new ArrayList<Tratamiento>();
 	}
 	@Override
 	public String toString() {
 		return super.toString()+"; Tipo: Ambulatorio"+ "- Ttos: "+tratamientos.toString();
 	}
+	
 	@Override
 	public boolean nuevoTratamiento( String nomTratamiento, Integer matricula, double honorario) {
 		
 		estadoCuenta = estadoCuenta + honorario;
 		return tratamientos.add(new Tratamiento(matricula,nomTratamiento));
 	}
+	
 	@Override
 	public double getSaldo() {
 		// TODO Auto-generated method stub
