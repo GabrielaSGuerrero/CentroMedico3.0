@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class CodigoCliente {
 
@@ -28,7 +30,6 @@ public class CodigoCliente {
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		System.out.println("\nSe da de alta la internacion...\n");
 		centro.altaInternacion(222, new Fecha(14,11,2020));
-	//	centro.verInternaciones(222); Es metodo propio, borrar al final.
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		System.out.println("\nSe agregan dos nuevas internaciones...\n");
 		centro.agregarInternacion(222,"General",new Fecha(16,11,2020));
@@ -56,6 +57,8 @@ public class CodigoCliente {
 		centro.agregarAtencion(111, new Fecha(18,11,2020),77777);
 		System.out.println("Atenciones paciente 111:");
 		System.out.println(centro.atencionesEnConsultorio(111));
+		
+
 	}
 
 }

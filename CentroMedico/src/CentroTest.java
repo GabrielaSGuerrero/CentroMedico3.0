@@ -64,14 +64,14 @@ public class CentroTest {
 
 	@Test
 	public void testSaldoPacienteOSocial() {
-		assertEquals(1300,ctro.getSaldo(432),20);
+		assertEquals(13000,ctro.getSaldo(432),20);
 		ctro.pagarSaldo(432);
 		assertEquals(0,ctro.getSaldo(432),1);
 	}
 
 	@Test
 	public void testSaldoPacienteAmbulatorio() {
-		assertEquals(10,ctro.getSaldo(543),2700);
+		assertEquals(27000,ctro.getSaldo(543),10);
 		ctro.pagarSaldo(543);
 		assertEquals(0,ctro.getSaldo(543),1);
 	}
@@ -102,5 +102,6 @@ public class CentroTest {
 		// nro hc 654 fue dado de alta
 		assertFalse(inter.contains(654));
 	}
+
 
 }

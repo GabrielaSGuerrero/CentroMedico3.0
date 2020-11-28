@@ -68,18 +68,6 @@ public class Centro {
 		System.out.println("honorario="+hon);
 	}
 	
-	//AGREGO METODO PARA VER ALGO
-/*	void verInternaciones(Integer hc) {
-		pacientes.get(hc).getInternaciones();
-	}
-	//otro
-	String verPaciente(Integer hC) {
-		return pacientes.get(hC).toString();
-	}
-	Paciente getPaciente (Integer hC) {
-		return pacientes.get(hC);
-	}  */
-	
 	double getSaldo(int hC) {
 		return pacientes.get(hC).getSaldo();
 	}
