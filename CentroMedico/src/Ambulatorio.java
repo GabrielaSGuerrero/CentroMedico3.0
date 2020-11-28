@@ -16,10 +16,9 @@ public class Ambulatorio extends Paciente {
 	}
 	
 	@Override
-	public boolean nuevoTratamiento( String nomTratamiento, Integer matricula, double honorario) {
-		
+	public void nuevoTratamiento( String nomTratamiento, Integer matricula, double honorario) {
 		estadoCuenta = estadoCuenta + honorario;
-		return tratamientos.add(new Tratamiento(matricula,nomTratamiento));
+		tratamientos.add(new Tratamiento(matricula,nomTratamiento));
 	}
 	
 	@Override

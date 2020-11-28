@@ -62,14 +62,14 @@ public class Centro {
 	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al paciente internado.
 		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
-	boolean agregarTratamiento(int hC, int matricula, String atencion) {
+	void agregarTratamiento(int hC, int matricula, String atencion) {
 		double hon = medicos.get(matricula).getHonorarios();
+		pacientes.get(hC).nuevoTratamiento(atencion,matricula, hon);
 		System.out.println("honorario="+hon);
-		return pacientes.get(hC).nuevoTratamiento(atencion,matricula, hon);
 	}
 	
 	//AGREGO METODO PARA VER ALGO
-	void verInternaciones(Integer hc) {
+/*	void verInternaciones(Integer hc) {
 		pacientes.get(hc).getInternaciones();
 	}
 	//otro
@@ -78,7 +78,7 @@ public class Centro {
 	}
 	Paciente getPaciente (Integer hC) {
 		return pacientes.get(hC);
-	}
+	}  */
 	
 	double getSaldo(int hC) {
 		return pacientes.get(hC).getSaldo();

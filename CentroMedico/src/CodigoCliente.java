@@ -35,12 +35,7 @@ public class CodigoCliente {
 		centro.agregarInternacion(444,"Pediatria",new Fecha(17,11,2020));
 		System.out.println("Lista de internacion:" + centro.listaInternacion());
 		
-		System.out.println("\nVERIFICACION :(\n "+centro.verPaciente(333));
-		//System.out.println("agregar nuevo tto: " + centro.agregarTratamiento(333, 66666, "Angioplastia"));
-		System.out.println("agregar nuevo tto: " + centro.getPaciente(333).nuevoTratamiento("Angioplastia", 66666, 15 ));
-		System.out.println(" "+centro.verPaciente(333));
-		Tratamiento t= new Tratamiento(3333,"HHH");
-		System.out.println("Nuevo tto solo: "+t);
+		centro.agregarTratamiento(333, 66666, "Angioplastia");
 		
 		System.out.println("\n\n" + centro.toString());
 		
