@@ -48,7 +48,7 @@ public class ObraSocial extends Paciente{
 				if (i.getFechaIngreso().esMayor(alta) && i.getFechaAlta().equals(new Fecha(0,0,0))) {
 					i.setFechaAlta(alta);
 					int cantDias = i.getFechaIngreso().diferenciaDias(i.getFechaAlta());
-					estadoCuenta = estadoCuenta + cantDias*(i.getValor()*porcentaje/100);
+					estadoCuenta = estadoCuenta + cantDias*(i.getValor()*porcentaje);
 				}
 			}
 		}

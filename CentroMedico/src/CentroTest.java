@@ -57,7 +57,7 @@ public class CentroTest {
 
 	@Test
 	public void testSaldoPacientePrivado() {
-		assertEquals(10,ctro.getSaldo(321),5000);
+		assertEquals(5000,ctro.getSaldo(321),10);
 		ctro.pagarSaldo(321);
 		assertEquals(0,ctro.getSaldo(321),1);
 	}
