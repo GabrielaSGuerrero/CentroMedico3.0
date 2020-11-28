@@ -36,7 +36,7 @@ public class ObraSocial extends Paciente{
 /*    -----OPCION 2------ :D
 		PORQUE el metodo "add" de HashSet, agrega SOLO SI NO EXISTE un objeto igual, eso lo hace llamando
 		al equals de Internacion (en este caso). Como ya hice que el Equals pregunte por la fecha, si hay
-		una internacion con la misma fecha no se agregará en nuestro conjunto.    */
+		una internacion con la misma fecha no se agregarï¿½ en nuestro conjunto.    */
 
 		internaciones.add(new Internacion(dia, area,precioDia));		
 	}
@@ -61,7 +61,7 @@ public class ObraSocial extends Paciente{
 	@Override
 	public void pagarSaldo() {
 		// TODO Auto-generated method stub
-		estadoCuenta = 0;
+		 estadoCuenta = 0 ;
 	}
 	@Override
 	public boolean estaInternado() {

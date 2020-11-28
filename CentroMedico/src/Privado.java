@@ -50,6 +50,7 @@ public class Privado extends Paciente {
 		}	*/
 		estadoCuenta= estadoCuenta+precio;
 		atencionesCE.add(new ConsExterno(matricula,dia,especialidad));
+		//estadoCuenta= estadoCuenta+precio;
 		
 	}
 	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?
