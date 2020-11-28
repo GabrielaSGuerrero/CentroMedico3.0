@@ -22,35 +22,14 @@ public class Privado extends Paciente {
 		return super.toString()+"; Tipo: Privado";
 	}
 	public void nuevoGuardia ( Fecha dia) {
-/*		boolean existe= false;
-		for(Guardia i: atencionesGuardia) {
-			existe = existe || i.getFecha().equals(dia); 
-		}
-		if (existe == false) {
-			atencionesGuardia.add(new Guardia(dia));
-		}
-		else {
-			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
-			System.out.println("Ya existe una internacion con esa fecha");
-		}	*/
+
 		atencionesGuardia.add(new Guardia(dia));
 	}
 	@Override
 	public void nuevoConsExterno(Integer matricula, Fecha dia, String especialidad, double precio) {
-	/*	boolean existe= false;
-		for(ConsExterno i: atencionesCE) {
-			existe = existe || i.getFecha().equals(dia); 
-		}
-		if (existe == false) {
-			atencionesCE.add(new ConsExterno(esp,matricula,dia));
-		}
-		else {
-			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
-			System.out.println("Ya existe una internacion con esa fecha");
-		}	*/
+		
 		estadoCuenta= estadoCuenta+precio;
 		atencionesCE.add(new ConsExterno(matricula,dia,especialidad));
-		//estadoCuenta= estadoCuenta+precio;
 		
 	}
 	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?

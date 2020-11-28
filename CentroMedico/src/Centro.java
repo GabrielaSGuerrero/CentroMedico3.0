@@ -45,8 +45,13 @@ public class Centro {
 	}
 	void agregarAtencion(Integer hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
 			String esp = medicos.get(matricula).getEspecialidad();
-			double hon = medicos.get(matricula).getHonorarios();
-			pacientes.get(hC).nuevoConsExterno(matricula,fecha, esp,hon);
+			double precioEsp = 0;
+		    for (Especialidad obj : especialidades) {
+		       if (obj.equals(new Especialidad(esp,0))) {
+		      	   precioEsp = obj.getValor();
+		       }
+		    }
+			pacientes.get(hC).nuevoConsExterno(matricula, fecha, esp, precioEsp);
 	}
 	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atencion por guardia.
 		pacientes.get(hC).nuevoGuardia(fecha);
