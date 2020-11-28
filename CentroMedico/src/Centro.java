@@ -5,9 +5,9 @@ import java.util.LinkedList;
 
 public class Centro {
  
-	HashMap<Integer, Paciente> pacientes; //No deja usar INT!! HAY Q CAMBIAR A INTEGER H.CLINICA DE PACIENTE
-	HashMap<Integer, Medico> medicos;        //iDEM
-	HashSet<Especialidad> especialidades; //sino un conjunto de tupla de String,double para nombre y valor
+	HashMap<Integer, Paciente> pacientes; 
+	HashMap<Integer, Medico> medicos;     
+	HashSet<Especialidad> especialidades; 
 	String CUIT;
 	String nombre;
 	double precioInternacion;
@@ -65,7 +65,6 @@ public class Centro {
 	void agregarTratamiento(int hC, int matricula, String atencion) {
 		double hon = medicos.get(matricula).getHonorarios();
 		pacientes.get(hC).nuevoTratamiento(atencion,matricula, hon);
-		System.out.println("honorario="+hon);
 	}
 	
 	double getSaldo(int hC) {
@@ -78,8 +77,6 @@ public class Centro {
 	public HashMap<Fecha, String> atencionesEnConsultorio(int hC){
 		return pacientes.get(hC).atCE();
     }
- 
-	
 	
 	public LinkedList<Integer> listaInternacion(){  //Devuelve una lista con las hC de la pacientes internados
 		LinkedList<Integer> nueva = new LinkedList<Integer>();

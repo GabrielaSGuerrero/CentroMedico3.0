@@ -13,8 +13,6 @@ public class Privado extends Paciente {
 		super(n, hC, nac);
 		this.atencionesGuardia= new HashSet<Guardia>();
 		this.atencionesCE= new HashSet<ConsExterno>();
-		
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -32,7 +30,7 @@ public class Privado extends Paciente {
 		atencionesCE.add(new ConsExterno(matricula,dia,especialidad));
 		
 	}
-	public HashMap<Fecha, String> atCE(){  ///VER TEMA CASTEO...PORQUE?
+	public HashMap<Fecha, String> atCE(){
 		
  		HashMap<Fecha, String> registro = new HashMap<Fecha, String>();
  		

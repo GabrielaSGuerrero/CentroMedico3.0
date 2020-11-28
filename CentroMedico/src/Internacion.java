@@ -24,7 +24,6 @@ public class Internacion {
 	}
 	public void setFechaAlta(Fecha f) {
 		this.fechaAlta = f;
-		//hacer la cuenta de cantidad de dias y llenar costoTotal
 	}
 	@Override
 	public int hashCode() {

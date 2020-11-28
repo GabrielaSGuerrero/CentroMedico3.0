@@ -24,8 +24,6 @@ public abstract class Paciente {
 	}
 	public boolean estaInternado() {
 		// TODO Auto-generated method stub
-		
-		
 		return false;
 	}
 	public void  altaInternacion(Fecha fechaAlta) {

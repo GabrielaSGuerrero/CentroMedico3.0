@@ -1,14 +1,13 @@
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Ambulatorio extends Paciente {
 	
-	ArrayList<Tratamiento> tratamientos;
+	HashSet<Tratamiento> tratamientos;
 	double estadoCuenta;
 
 	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);
-		this.tratamientos = new ArrayList<Tratamiento>();
+		this.tratamientos = new HashSet<Tratamiento>();
 	}
 	@Override
 	public String toString() {

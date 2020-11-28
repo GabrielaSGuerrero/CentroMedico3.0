@@ -20,24 +20,6 @@ public class ObraSocial extends Paciente{
 	}
 	@Override
 	public void nuevaInternacion (String area, Fecha dia, double precioDia) {
-	/*------OPCION 1-------------------
-	 * boolean existe= false;
-		for(Internacion i: internaciones) {
-			existe = existe || i.getFechaIngreso().equals(dia); 
-		}
-		if (existe == false) {
-			internaciones.add(new Internacion(dia, area));
-		}
-		else {
-			//Run Throw new Exception ("Ya existe una internacion con esa fecha");
-			System.out.println("Ya existe una internacion con esa fecha");
-		}
-		*/
-/*    -----OPCION 2------ :D
-		PORQUE el metodo "add" de HashSet, agrega SOLO SI NO EXISTE un objeto igual, eso lo hace llamando
-		al equals de Internacion (en este caso). Como ya hice que el Equals pregunte por la fecha, si hay
-		una internacion con la misma fecha no se agregar� en nuestro conjunto.    */
-
 		internaciones.add(new Internacion(dia, area,precioDia));		
 	}
 	
