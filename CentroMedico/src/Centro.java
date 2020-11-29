@@ -21,7 +21,7 @@ public class Centro {
 		this.especialidades = new HashSet<Especialidad> ();
 	}
 	@Override
-	public String toString() { //STRINGBUILDER!!!
+	public String toString() { 
 		StringBuilder sb = new StringBuilder();
 		sb.append("----------"+this.nombre+"---------");
 		sb.append("\nCUIT: "+this.CUIT);

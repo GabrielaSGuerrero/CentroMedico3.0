@@ -1,7 +1,6 @@
 
 public class Especialidad {
 	String nombre;
-	int codigo; //mencionado en la consigna, no usado en los metodos proporcionados.
 	double valor;
 
 	Especialidad (String n, double val){ //Constructor

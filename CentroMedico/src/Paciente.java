@@ -16,43 +16,24 @@ public abstract class Paciente {
 	}
 	public abstract double getSaldo();
 	public abstract void pagarSaldo();
-	public void nuevaInternacion(String area, Fecha dia, double precioInternacion) {
-		// TODO Auto-generated method stub
-	}
-	public Integer getHC() {
-		return this.historiaClinica;
-	}
+	public void nuevaInternacion(String area, Fecha dia, double precioInternacion) {}
 	public boolean estaInternado() {
-		// TODO Auto-generated method stub
 		return false;
 	}
-	public void  altaInternacion(Fecha fechaAlta) {
-		// TODO Auto-generated method stub		
-		}
-	
-	
-	public void nuevoGuardia(Fecha fecha) {
-		// TODO Auto-generated method stub
-		
-	}
-	public void getInternaciones() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void  altaInternacion(Fecha fechaAlta) {}
+	public void nuevoGuardia(Fecha fecha) {}
+	public void getInternaciones() {}
 	public HashMap<Fecha, String> atCE() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-	public void getCE() {
-		// TODO Auto-generated method stub
-		
-	}
-	public void nuevoConsExterno(Integer matricula, Fecha dia, String especialidad, double precio) {
-		// TODO Auto-generated method st
-	}
+	public void getCE() {}
+	public void nuevoConsExterno(Integer matricula, Fecha dia, String especialidad, double precio) {}
 	public void nuevoTratamiento( String nomTratamiento, Integer matricula, double honorario) {}
+	public Integer getHC() {
+		return historiaClinica;
+	}
 	
-		}
+}
 	
 
 
