@@ -22,8 +22,14 @@ public class Centro {
 	}
 	@Override
 	public String toString() { //STRINGBUILDER!!!
-		return "----------"+this.nombre+"---------"+"\nCUIT: "+this.CUIT+"\nProfesionales: "+medicos.toString()+"\nEspecialidades que ofrece el Centro: "
-				+"\nPacientes del Centro:"+pacientes.toString()+"\nPrecio de internacion por dia: "+this.precioInternacion+"$";
+		StringBuilder sb = new StringBuilder();
+		sb.append("----------"+this.nombre+"---------");
+		sb.append("\nCUIT: "+this.CUIT);
+		sb.append("\nProfesionales: "+medicos.toString());
+		sb.append("\nEspecialidades que ofrece el Centro: "+this.especialidades);
+		sb.append("\nPacientes del Centro:"+pacientes.toString());
+		sb.append("\nPrecio de internacion por dia: "+this.precioInternacion+"$");
+		return sb.toString();
 	}
 	
 	void agregarEspecialidad(String nombre, double valor) {	

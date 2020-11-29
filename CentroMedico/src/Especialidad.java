@@ -6,7 +6,6 @@ public class Especialidad {
 
 	Especialidad (String n, double val){ //Constructor
 		this.nombre = n;
-		//this.codigo= mat;
 		this.valor= val;		
 	}
 	
@@ -22,7 +21,6 @@ public class Especialidad {
 		return result;
 	}
 	
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -44,7 +42,10 @@ public class Especialidad {
 			return false;
 		return true;
 	}
-	
+	@Override
+	public String toString() {
+		return this.nombre+" - Valor: "+this.valor+"$";
+	}
 	
 
 	

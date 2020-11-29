@@ -24,8 +24,8 @@ public class Medico {
 
 	@Override
 	public String toString() {
-		return "Medico ["+nombre + ", matricula=" + matricula + ", honorarios=" + honorarios
-				+ ", especialidad=" + especialidad + "]";
+		return nombre + " - MN: " + matricula + " - Honorarios: " + honorarios
+				+"$"+ " - Especialidad: " + especialidad;
 	}
 	
 	
