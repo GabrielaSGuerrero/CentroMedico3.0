@@ -28,7 +28,7 @@ public class Fecha {
 	public static Fecha hoy() {
 		LocalDate fecha = LocalDate.now();
 		return new Fecha(fecha.getDayOfMonth(), fecha.getMonthValue(), fecha.getYear());
-		}
+	}
 	
 	public int diferenciaDias(Fecha fin) {
 		LocalDate d1 = LocalDate.of(this.anio, this.mes, this.dia);

@@ -32,24 +32,24 @@ public class Centro {
 		return sb.toString();
 	}
 	
-	void agregarEspecialidad(String nombre, double valor) {	
+	public void agregarEspecialidad(String nombre, double valor) {	
 			 especialidades.add(new Especialidad(nombre,valor));
 	}
-	void agregarMedico(String nombre, Integer matricula, String nomEspecialidad,double valorTratamiento) {
+	public void agregarMedico(String nombre, Integer matricula, String nomEspecialidad,double valorTratamiento) {
 		medicos.put(matricula, new Medico(nombre, matricula,valorTratamiento,nomEspecialidad));
 	}//asegurada la no repeticion porque .put lo garantiza dado que matricula es key
 	
-	void agregarPacientePrivado(String nombre, Integer hC, Fecha nac) {
+	public void agregarPacientePrivado(String nombre, Integer hC, Fecha nac) {
 		pacientes.put(hC, new Privado(nombre, hC, nac));
 	}
 	
-	void agregarPacienteAmbulatorio(String nombre, Integer hC, Fecha nac) {
+	public void agregarPacienteAmbulatorio(String nombre, Integer hC, Fecha nac) {
 		pacientes.put(hC, new Ambulatorio(nombre, hC, nac));
 	}
-	void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
+	public void agregarPacienteObraSocial(String nombre, Integer hC, Fecha nac, String	osocial, double p) {
 		pacientes.put(hC, new ObraSocial(nombre, hC, nac,osocial,p));
 	}
-	void agregarAtencion(Integer hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
+	public void agregarAtencion(Integer hC, Fecha fecha, int matricula) { //en el caso de atencion en consultorio.
 			String esp = medicos.get(matricula).getEspecialidad();
 			double precioEsp = 0;
 		    for (Especialidad obj : especialidades) {
@@ -59,24 +59,24 @@ public class Centro {
 		    }
 			pacientes.get(hC).nuevoConsExterno(matricula, fecha, esp, precioEsp);
 	}
-	void agregarAtencion(int hC, Fecha fecha) { //en el caso de atencion por guardia.
+	public void agregarAtencion(int hC, Fecha fecha) { //en el caso de atencion por guardia.
 		pacientes.get(hC).nuevoGuardia(fecha);
 	}
-	void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internacion.
+	public void agregarInternacion(int hC, String area, Fecha fingreso) { //ingresa el	paciente a internacion.
 		pacientes.get(hC).nuevaInternacion(area,fingreso,precioInternacion);
 	}
-	void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al paciente internado.
+	public void altaInternacion(int hC, Fecha fechaAlta) {// da de alta al paciente internado.
 		pacientes.get(hC).altaInternacion(fechaAlta);
 	}
-	void agregarTratamiento(int hC, int matricula, String atencion) {
+	public void agregarTratamiento(int hC, int matricula, String atencion) {
 		double hon = medicos.get(matricula).getHonorarios();
 		pacientes.get(hC).nuevoTratamiento(atencion,matricula, hon);
 	}
 	
-	double getSaldo(int hC) {
+	public double getSaldo(int hC) {
 		return pacientes.get(hC).getSaldo();
 	}
-	void pagarSaldo(int hC) {
+	public void pagarSaldo(int hC) {
 		pacientes.get(hC).pagarSaldo();
 	}
 	
