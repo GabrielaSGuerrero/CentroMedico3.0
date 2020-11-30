@@ -11,7 +11,6 @@ public class ObraSocial extends Paciente{
 		super(n, hC, nac);
 		this.obraSocial = OS;
 		this.porcentaje = p;
-		//this.atencionesInternacion = new HashSet<tupla<Fecha,Internacion>>();
 		this.internaciones = new HashSet<Internacion>();
 	}
 	@Override
@@ -28,7 +27,9 @@ public class ObraSocial extends Paciente{
 		if (internaciones!= null ) {
 			for (Internacion i: internaciones) {
 				if (i.getFechaIngreso().esMayor(alta) && i.getFechaAlta().equals(new Fecha(0,0,0))) {
+					
 					i.setFechaAlta(alta);
+					
 					int cantDias = i.getFechaIngreso().diferenciaDias(i.getFechaAlta());
 					estadoCuenta = estadoCuenta + cantDias*(i.getValor()*porcentaje);
 				}
@@ -53,16 +54,13 @@ public class ObraSocial extends Paciente{
 				internado= internado || i.getFechaAlta().equals(new Fecha(0,0,0));
 			}
 			return internado;
-			}
-		else {
-		return false;}
-	}
-	
-	public void getInternaciones() {
-		System.out.println(internaciones.toString());
 		}
-		
+		else {
+			return false;
+		}
 	}
+
+}
 	
 	
 
