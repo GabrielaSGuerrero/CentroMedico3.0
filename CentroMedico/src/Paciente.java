@@ -1,9 +1,10 @@
 import java.util.HashMap;
 
 public abstract class Paciente {
-	String nombre;
-	Integer historiaClinica;
-	Fecha nac;
+	
+	private String nombre;
+	private Integer historiaClinica;
+	private Fecha nac;
 
 	Paciente (String n, Integer hC, Fecha nac){
 		this.nombre = n;

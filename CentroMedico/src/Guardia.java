@@ -1,7 +1,7 @@
 
 public class Guardia {
 	
-	Fecha fecha;
+	private Fecha fecha;
 	
 	Guardia ( Fecha fecha){ 		
 		this.fecha=fecha;

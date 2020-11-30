@@ -5,12 +5,12 @@ import java.util.LinkedList;
 
 public class Centro {
  
-	HashMap<Integer, Paciente> pacientes; 
-	HashMap<Integer, Medico> medicos;     
-	HashSet<Especialidad> especialidades; 
-	String CUIT;
-	String nombre;
-	double precioInternacion;
+	private HashMap<Integer, Paciente> pacientes; 
+	private HashMap<Integer, Medico> medicos;     
+	private HashSet<Especialidad> especialidades; 
+	private String CUIT;
+	private String nombre;
+	private double precioInternacion;
 
 	Centro ( String nombre, String CUIT, double pInternacion){
 		this.CUIT = CUIT;

@@ -2,9 +2,9 @@
 
 public class ConsExterno  {
 	
-	int matricula;
-	Fecha fecha;
-	String especialidad;
+	private int matricula;
+	private Fecha fecha;
+	private String especialidad;
 	
 	ConsExterno(int matricula,Fecha fecha, String esp){
 		this.fecha=fecha;

@@ -2,8 +2,8 @@ import java.util.HashSet;
 
 public class Ambulatorio extends Paciente {
 	
-	HashSet<Tratamiento> tratamientos;
-	double estadoCuenta;
+	private HashSet<Tratamiento> tratamientos;
+	private double estadoCuenta;
 
 	Ambulatorio(String n, Integer hC, Fecha nac) {
 		super(n, hC, nac);

@@ -1,7 +1,7 @@
 
 public class Especialidad {
-	String nombre;
-	double valor;
+	private String nombre;
+	private double valor;
 
 	Especialidad (String n, double val){ //Constructor
 		this.nombre = n;

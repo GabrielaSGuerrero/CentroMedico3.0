@@ -4,9 +4,9 @@ import java.util.Iterator;
 
 public class Privado extends Paciente {
 	
-	HashSet<Guardia> atencionesGuardia;
-	HashSet<ConsExterno> atencionesCE;
-	double estadoCuenta;
+	private HashSet<Guardia> atencionesGuardia;
+	private HashSet<ConsExterno> atencionesCE;
+	private double estadoCuenta;
 
 
 	Privado(String n, Integer hC, Fecha nac) {

@@ -1,9 +1,9 @@
 
 public class Internacion {
-	double valor;
-	Fecha fecha;
-	Fecha fechaAlta;
-	String area;
+	private double valor;
+	private Fecha fecha;
+	private Fecha fechaAlta;
+	private String area;
 
 	Internacion(Fecha ingreso, String area, double valor){
 		this.fecha = ingreso;

@@ -1,9 +1,9 @@
 
 public class Medico {
-	String nombre;
-	Integer matricula;
-	double honorarios;
-	String especialidad;
+	private String nombre;
+	private Integer matricula;
+	private double honorarios;
+	private String especialidad;
 
 	Medico (String n, Integer mat, double hono, String especialidad){ //Constructor
 		this.nombre = n;

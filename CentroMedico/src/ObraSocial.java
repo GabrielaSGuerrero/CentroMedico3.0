@@ -2,10 +2,10 @@ import java.util.HashSet;
 
 public class ObraSocial extends Paciente{
 
-	String obraSocial;
-	double porcentaje;
-	HashSet<Internacion> internaciones;
-	double estadoCuenta;
+	private String obraSocial;
+	private double porcentaje;
+	private HashSet<Internacion> internaciones;
+	private double estadoCuenta;
 	
 	ObraSocial(String n, int hC, Fecha nac, String OS, double p) {
 		super(n, hC, nac);
