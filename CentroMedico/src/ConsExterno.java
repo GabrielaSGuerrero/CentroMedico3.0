@@ -2,7 +2,7 @@
 
 public class ConsExterno  {
 	
-	private int matricula;
+	private int matricula; //No se utiliza pero se decide dejar registro del medico que realizó la atencion, para preever futuras implementaciones.
 	private Fecha fecha;
 	private String especialidad;
 	
